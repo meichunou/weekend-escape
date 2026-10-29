@@ -1,0 +1,67 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: var(--ink); }
+    #ec-world { position: absolute; inset: 0; background: var(--cream); }
+    #ec-dots { position: absolute; inset: 0; background: radial-gradient(rgba(35, 27, 46, 0.1) 4px, transparent 4.5px) 0 0 / 62px 62px; }
+    #ec-sun { position: absolute; left: 90px; top: 1330px; width: 900px; height: 900px; }
+    #ec-ground { position: absolute; left: 0; right: 0; top: 1640px; bottom: 0; background: var(--peach); border-top: var(--line); }
+    #ec-claim { position: absolute; left: 0; right: 0; top: 220px; text-align: center; }
+    .ec-line { font: 800 116px/1.02 var(--display); letter-spacing: -0.035em; white-space: nowrap; }
+    .ec-w { display: inline-block; }
+    .hl { position: relative; display: inline-block; z-index: 0; }
+    .hl-bar { position: absolute; left: -0.04em; right: -0.04em; bottom: 0.1em; height: 0.34em; background: var(--coral); z-index: -1; transform-origin: left center; }
+    #ec-lockup { position: absolute; left: 0; right: 0; top: 760px; display: flex; justify-content: center; align-items: center; gap: 22px; }
+    #ec-mark { width: 124px; height: 124px; }
+    #ec-word { font: 800 70px var(--display); letter-spacing: -0.02em; white-space: nowrap; }
+    #ec-url-wrap { position: absolute; left: 0; right: 0; top: 960px; display: flex; justify-content: center; }
+    #ec-url { background: var(--ink); color: var(--cream); border: var(--line); border-radius: 999px; padding: 28px 50px; font: 700 46px var(--body); box-shadow: 12px 12px 0 var(--sun); white-space: nowrap; }
+    #ec-fine { position: absolute; left: 0; right: 0; top: 1130px; text-align: center; font: 500 30px var(--mono); color: var(--ink-soft); }
+  </style>
+  <div data-hf-id="hf-00mi" id="root" data-composition-id="endcard" data-width="1080" data-height="1920">
+    <div data-hf-id="hf-9ibi" id="ec-world">
+      <div data-hf-id="hf-jjse" id="ec-dots"></div>
+      <svg data-hf-id="hf-nzr5" id="ec-sun" viewBox="-500 -500 1000 1000" aria-hidden="true">
+        <defs data-hf-id="hf-mh0t"><clipPath data-hf-id="hf-cybb" id="ec-sun-clip"><circle data-hf-id="hf-bqb4" r="478" /></clipPath></defs>
+        <circle data-hf-id="hf-en3d" r="478" fill="#FFB92E" />
+        <g data-hf-id="hf-5f7o" clip-path="url(#ec-sun-clip)" fill="#FFF3E4">
+          <rect data-hf-id="hf-cns0" x="-500" y="40" width="1000" height="12" /><rect data-hf-id="hf-2aga" x="-500" y="98" width="1000" height="19" />
+          <rect data-hf-id="hf-y3k2" x="-500" y="160" width="1000" height="26" /><rect data-hf-id="hf-zbtl" x="-500" y="226" width="1000" height="33" />
+          <rect data-hf-id="hf-uapu" x="-500" y="296" width="1000" height="40" /><rect data-hf-id="hf-p0cs" x="-500" y="370" width="1000" height="47" />
+          <rect data-hf-id="hf-jiuz" x="-500" y="440" width="1000" height="60" />
+        </g>
+        <circle data-hf-id="hf-1d7o" r="478" fill="none" stroke="#231B2E" stroke-width="10" />
+      </svg>
+      <div data-hf-id="hf-bx2z" id="ec-ground"></div>
+      <div data-hf-id="hf-a3ku" id="ec-claim">
+        <div data-hf-id="hf-0ykj" class="ec-line"><span data-hf-id="hf-wyl3" class="ec-w" id="ec-w1">Escape</span> <span data-hf-id="hf-k59i" class="ec-w" id="ec-w2">Paris</span></div>
+        <div data-hf-id="hf-1cw3" class="ec-line"><span data-hf-id="hf-2hd2" class="ec-w" id="ec-w3">this</span> <span data-hf-id="hf-vfkw" class="ec-w" id="ec-w4">weekend.</span></div>
+        <div data-hf-id="hf-0yl2" class="ec-line"><span data-hf-id="hf-4a62" class="ec-w" id="ec-w5">Within your</span></div>
+        <div data-hf-id="hf-0ka1" class="ec-line"><span data-hf-id="hf-utuu" class="ec-w hl" id="ec-w6"><i data-hf-id="hf-cxjq" class="hl-bar" id="ec-bar"></i>budget.</span></div>
+      </div>
+      <div data-hf-id="hf-9mhg" id="ec-lockup">
+        <img data-hf-id="hf-egru" id="ec-mark" src="assets/logo.svg" alt="Weekend Escape logo" />
+        <div data-hf-id="hf-7rpy" id="ec-word">Weekend Escape</div>
+      </div>
+      <div data-hf-id="hf-8nra" id="ec-url-wrap"><div data-hf-id="hf-r7rk" id="ec-url">weekend-escape-kappa.vercel.app</div></div>
+      <div data-hf-id="hf-0ar1" id="ec-fine">Prices are estimates.</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // Iris out of the notification onto the cream world.
+    tl.fromTo("#ec-world", { clipPath: "circle(0px at 540px 950px)" }, { clipPath: "circle(1500px at 540px 950px)", duration: 0.5, ease: "power3.in" }, 0);
+    tl.fromTo("#ec-sun", { y: 480 }, { y: 0, duration: 1.6, ease: "expo.out" }, 0.3);
+    // Claim: word by word, from blur, no slide.
+    tl.fromTo(["#ec-w1", "#ec-w2", "#ec-w3", "#ec-w4", "#ec-w5", "#ec-w6"], { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.14, ease: "power2.out", stagger: 0.09 }, 0.45);
+    tl.fromTo("#ec-bar", { scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power3.out" }, 1.15);
+    // The mark springs in, the wordmark wipes in beside it.
+    tl.fromTo("#ec-mark", { opacity: 0, scale: 0.2, rotation: -30 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.55, ease: "back.out(1.8)" }, 1.8);
+    tl.fromTo("#ec-word", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "power3.out" }, 2.05);
+    tl.fromTo("#ec-url", { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out" }, 2.45);
+    tl.fromTo("#ec-fine", { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "none" }, 2.75);
+    // The link is pressed once, like the site's buttons.
+    tl.to("#ec-url", { x: 8, y: 8, boxShadow: "4px 4px 0 #FFB92E", duration: 0.07, ease: "power2.in" }, 3.2);
+    tl.to("#ec-url", { x: 0, y: 0, boxShadow: "12px 12px 0 #FFB92E", duration: 0.18, ease: "power2.out" }, 3.3);
+    window.__timelines["endcard"] = tl;
+  </script>
+</template>

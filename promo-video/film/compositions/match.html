@@ -1,0 +1,129 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #mt-ground { position: absolute; inset: 0; background: var(--cream); }
+    /* Carried over from the quiz: same place, same stickers. */
+    .mt-st { position: absolute; top: 185px; width: 310px; height: 112px; background: var(--sun); border: var(--line); border-radius: 26px; box-shadow: 8px 8px 0 var(--ink); padding: 12px 20px 0; }
+    .mt-st span { display: block; white-space: nowrap; font: 500 28px var(--mono); letter-spacing: 0.06em; }
+    .mt-st b { display: block; font: 700 42px/1.1 var(--body); white-space: nowrap; }
+    #mt-st1 { left: 50px; } #mt-st2 { left: 380px; } #mt-st3 { left: 710px; }
+    #mt-title { position: absolute; left: 60px; top: 340px; font: 800 72px/1 var(--display); letter-spacing: -0.03em; white-space: nowrap; }
+    #mt-board { position: absolute; inset: 0; }
+    .mt-row { position: absolute; width: 470px; height: 110px; background: var(--paper); border: 5px solid var(--ink); border-radius: 20px; box-shadow: 6px 6px 0 var(--ink); display: flex; align-items: center; gap: 14px; padding: 0 22px; }
+    .mt-em { font-size: 46px; }
+    .mt-city { font: 800 40px var(--display); letter-spacing: -0.02em; white-space: nowrap; }
+    .mt-price { margin-left: auto; font: 800 44px var(--display); letter-spacing: -0.02em; white-space: nowrap; }
+    .mt-plane { font: 500 28px var(--mono); color: var(--ink-soft); }
+    .mt-price, .mt-stamp, .mt-tag, #mt-match, #mt-ticket { opacity: 0; }
+    .mt-stamp { position: absolute; right: -12px; top: 26px; padding: 4px 12px; border: 5px solid var(--coral-text); border-radius: 10px; background: var(--paper); color: var(--coral-text); font: 500 30px var(--mono); letter-spacing: 0.06em; white-space: nowrap; }
+    .mt-tag { position: absolute; padding: 2px 12px; border: 4px solid var(--ink); background: var(--ink); color: var(--cream); border-radius: 10px; font: 500 28px var(--mono); white-space: nowrap; }
+    #mt-match { position: absolute; left: 330px; top: 600px; padding: 6px 16px; background: var(--coral); border: 5px solid var(--ink); border-radius: 12px; font: 500 28px var(--mono); letter-spacing: 0.08em; color: var(--ink); white-space: nowrap; }
+    /* The big ticket: the Brussels row grown into the frame. */
+    #mt-ticket { position: absolute; left: 70px; top: 470px; width: 940px; height: 760px; background: var(--paper); border: var(--line); border-radius: 40px; box-shadow: var(--shadow); overflow: hidden; }
+    #mt-tk-fill { position: absolute; inset: 0; background: var(--coral); }
+    #mt-tk-in { position: absolute; inset: 0; }
+    #mt-tk-head { padding: 36px 48px 30px; background: var(--peach); border-bottom: 6px dashed var(--ink); }
+    #mt-tk-route { font: 500 30px var(--mono); letter-spacing: 0.06em; }
+    #mt-tk-city { font: 800 132px/1 var(--display); letter-spacing: -0.035em; margin-top: 12px; white-space: nowrap; }
+    #mt-tk-body { padding: 26px 48px 0; }
+    .mt-line { display: flex; justify-content: space-between; align-items: baseline; font: 700 46px var(--body); padding: 12px 0; }
+    .mt-line b { font: 800 56px var(--display); }
+    #mt-tk-total { display: flex; justify-content: space-between; align-items: baseline; margin: 14px 48px 0; padding-top: 18px; border-top: var(--line); }
+    #mt-tk-total > span { font: 500 30px var(--mono); letter-spacing: 0.06em; }
+    #mt-tk-total b { font: 800 150px/1 var(--display); letter-spacing: -0.04em; color: var(--coral-text); }
+    #mt-yours { position: absolute; left: 600px; top: 410px; padding: 10px 24px; background: var(--coral); border: var(--line); border-radius: 16px; box-shadow: 8px 8px 0 var(--ink); font: 800 52px var(--display); white-space: nowrap; }
+    #mt-note { position: absolute; left: 70px; top: 1262px; font: 500 28px var(--mono); color: var(--ink-soft); white-space: nowrap; }
+  </style>
+  <div data-hf-id="hf-9h4g" id="root" data-composition-id="match" data-width="1080" data-height="1920">
+    <div data-hf-id="hf-f28m" id="mt-ground"></div>
+    <div data-hf-id="hf-sxc9" class="mt-st" id="mt-st1"><span data-hf-id="hf-7il8">BUDGET</span><b data-hf-id="hf-rnst">€100–€150</b></div>
+    <div data-hf-id="hf-wvga" class="mt-st" id="mt-st2"><span data-hf-id="hf-tqva">TRANSPORT</span><b data-hf-id="hf-yhrd">Train</b></div>
+    <div data-hf-id="hf-0tkb" class="mt-st" id="mt-st3"><span data-hf-id="hf-3dk5">VIBE</span><b data-hf-id="hf-6xg1">Culture</b></div>
+    <div data-hf-id="hf-nrrb" id="mt-title">14 destinations.</div>
+    <div data-hf-id="hf-fmg5" id="mt-board">
+      <div data-hf-id="hf-hojw" data-layout-allow-overlap class="mt-row" id="mt-r-lille" style="left:55px;top:440px"><span data-hf-id="hf-7rdi" class="mt-em">🧇</span><span data-hf-id="hf-btg4" class="mt-city">Lille</span><b data-hf-id="hf-p3lt" class="mt-price" id="mt-p-lille">~€99</b></div>
+      <div data-hf-id="hf-sqdo" data-layout-allow-overlap class="mt-row" id="mt-r-brussels" style="left:55px;top:564px"><span data-hf-id="hf-zibw" class="mt-em">🍫</span><span data-hf-id="hf-7kp3" class="mt-city">Brussels</span><b data-hf-id="hf-uata" class="mt-price" id="mt-p-brussels">~€136</b></div>
+      <div data-hf-id="hf-so1s" data-layout-allow-overlap class="mt-row" id="mt-r-ghent" style="left:55px;top:688px"><span data-hf-id="hf-3n9p" class="mt-em">🏰</span><span data-hf-id="hf-4r6y" class="mt-city">Ghent</span><b data-hf-id="hf-88pd" class="mt-price" id="mt-p-ghent">~€150</b></div>
+      <div data-hf-id="hf-dtt9" data-layout-allow-overlap class="mt-row" id="mt-r-bruges" style="left:55px;top:812px"><span data-hf-id="hf-0d0q" class="mt-em">🚲</span><span data-hf-id="hf-1na2" class="mt-city">Bruges</span><b data-hf-id="hf-3k6e" class="mt-price" id="mt-p-bruges">~€162</b><span data-hf-id="hf-z5ce" class="mt-stamp" id="mt-s-bruges">OVER €150</span></div>
+      <div data-hf-id="hf-bq9i" data-layout-allow-overlap class="mt-row" id="mt-r-strasbourg" style="left:55px;top:936px"><span data-hf-id="hf-bszr" class="mt-em">🥨</span><span data-hf-id="hf-yt6q" class="mt-city">Strasbourg</span><b data-hf-id="hf-k4q0" class="mt-price" id="mt-p-strasbourg">~€160</b><span data-hf-id="hf-xfe6" class="mt-stamp" id="mt-s-strasbourg">OVER €150</span></div>
+      <div data-hf-id="hf-x0m2" data-layout-allow-overlap class="mt-row" id="mt-r-cologne" style="left:55px;top:1060px"><span data-hf-id="hf-sr4f" class="mt-em">🍺</span><span data-hf-id="hf-zcuf" class="mt-city">Cologne</span><b data-hf-id="hf-beyu" class="mt-price" id="mt-p-cologne">~€174</b><span data-hf-id="hf-kljv" class="mt-stamp" id="mt-s-cologne">OVER €150</span></div>
+      <div data-hf-id="hf-1d98" data-layout-allow-overlap class="mt-row" id="mt-r-amsterdam" style="left:55px;top:1184px"><span data-hf-id="hf-gzt4" class="mt-em">🌷</span><span data-hf-id="hf-3s5y" class="mt-city">Amsterdam</span><b data-hf-id="hf-853v" class="mt-price" id="mt-p-amsterdam">~€220</b><span data-hf-id="hf-u3eq" class="mt-stamp" id="mt-s-amsterdam">OVER €150</span></div>
+      <div data-hf-id="hf-lzef" data-layout-allow-overlap class="mt-row" id="mt-r-london" style="left:555px;top:440px"><span data-hf-id="hf-7wu9" class="mt-em">🚇</span><span data-hf-id="hf-5d2o" class="mt-city">London</span><b data-hf-id="hf-9mxz" class="mt-price" id="mt-p-london">~€260</b><span data-hf-id="hf-30io" class="mt-stamp" id="mt-s-london">OVER €150</span></div>
+      <div data-hf-id="hf-xaep" data-layout-allow-overlap class="mt-row" id="mt-r-barcelona" style="left:555px;top:564px"><span data-hf-id="hf-902k" class="mt-em">🏖️</span><span data-hf-id="hf-dwgv" class="mt-city">Barcelona</span><b data-hf-id="hf-uvf4" class="mt-price" id="mt-p-barcelona">~€190</b><span data-hf-id="hf-bqyr" class="mt-stamp" id="mt-s-barcelona">OVER €150</span></div>
+      <div data-hf-id="hf-h6j0" data-layout-allow-overlap class="mt-row" id="mt-r-lisbon" style="left:555px;top:688px"><span data-hf-id="hf-9i2d" class="mt-em">🚋</span><span data-hf-id="hf-2anx" class="mt-city">Lisbon</span><b data-hf-id="hf-6y5g" class="mt-price mt-plane" id="mt-p-lisbon">✈ only</b><span data-hf-id="hf-xzji" class="mt-stamp" id="mt-s-lisbon">NO TRAIN</span></div>
+      <div data-hf-id="hf-2ntu" data-layout-allow-overlap class="mt-row" id="mt-r-porto" style="left:555px;top:812px"><span data-hf-id="hf-rk7c" class="mt-em">🍷</span><span data-hf-id="hf-iy9y" class="mt-city">Porto</span><b data-hf-id="hf-y4g7" class="mt-price mt-plane" id="mt-p-porto">✈ only</b><span data-hf-id="hf-2ezf" class="mt-stamp" id="mt-s-porto">NO TRAIN</span></div>
+      <div data-hf-id="hf-tcoy" data-layout-allow-overlap class="mt-row" id="mt-r-rome" style="left:555px;top:936px"><span data-hf-id="hf-d69i" class="mt-em">🍝</span><span data-hf-id="hf-bh9b" class="mt-city">Rome</span><b data-hf-id="hf-sx82" class="mt-price mt-plane" id="mt-p-rome">✈ only</b><span data-hf-id="hf-0pj0" class="mt-stamp" id="mt-s-rome">NO TRAIN</span></div>
+      <div data-hf-id="hf-2v36" data-layout-allow-overlap class="mt-row" id="mt-r-prague" style="left:555px;top:1060px"><span data-hf-id="hf-bfiq" class="mt-em">🌉</span><span data-hf-id="hf-qtam" class="mt-city">Prague</span><b data-hf-id="hf-8ind" class="mt-price mt-plane" id="mt-p-prague">✈ only</b><span data-hf-id="hf-jbbf" class="mt-stamp" id="mt-s-prague">NO TRAIN</span></div>
+      <div data-hf-id="hf-zlth" data-layout-allow-overlap class="mt-row" id="mt-r-berlin" style="left:555px;top:1184px"><span data-hf-id="hf-27x4" class="mt-em">🎧</span><span data-hf-id="hf-2tb6" class="mt-city">Berlin</span><b data-hf-id="hf-8iu2" class="mt-price" id="mt-p-berlin">~€214</b><span data-hf-id="hf-zmye" class="mt-stamp" id="mt-s-berlin">OVER €150</span></div>
+      <span data-hf-id="hf-4v06" class="mt-tag" id="mt-t-lille" style="left:250px;top:418px">culture 3/5</span>
+      <span data-hf-id="hf-itta" class="mt-tag" id="mt-t-brussels" style="left:250px;top:542px">culture 4/5</span>
+      <span data-hf-id="hf-yehe" class="mt-tag" id="mt-t-ghent" style="left:250px;top:666px">culture 4/5</span>
+      <div data-hf-id="hf-jbgt" id="mt-match">BEST MATCH</div>
+    </div>
+    <div data-hf-id="hf-yih7" id="mt-ticket">
+      <div data-hf-id="hf-27u0" id="mt-tk-in">
+        <div data-hf-id="hf-jm63" id="mt-tk-head">
+          <div data-hf-id="hf-pjgb" id="mt-tk-route">PARIS → BRUSSELS · 🚆 TRAIN 1h20</div>
+          <div data-hf-id="hf-tg7a" id="mt-tk-city">Brussels 🍫</div>
+        </div>
+        <div data-hf-id="hf-v4a9" id="mt-tk-body">
+          <div data-hf-id="hf-h7o9" class="mt-line" id="mt-l1"><span data-hf-id="hf-5cu5">Train</span><b data-hf-id="hf-a03r">€35</b></div>
+          <div data-hf-id="hf-l5sa" class="mt-line" id="mt-l2"><span data-hf-id="hf-oy8w">2 nights</span><b data-hf-id="hf-9llw">€56</b></div>
+          <div data-hf-id="hf-rbi3" class="mt-line" id="mt-l3"><span data-hf-id="hf-yp5x">Food</span><b data-hf-id="hf-ya7c">€45</b></div>
+        </div>
+        <div data-hf-id="hf-3h8h" id="mt-tk-total"><span data-hf-id="hf-4v51">EST. TOTAL</span><b data-hf-id="hf-wsbb">~€<span data-hf-id="hf-q04f" id="mt-sum">136</span></b></div>
+      </div>
+      <div data-hf-id="hf-bxfy" id="mt-tk-fill"></div>
+    </div>
+    <div data-hf-id="hf-aymf" id="mt-yours">Your match</div>
+    <div data-hf-id="hf-94mp" id="mt-note">Estimates from our destination data, not live prices.</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const all = ["lille","brussels","ghent","bruges","strasbourg","cologne","amsterdam","london","barcelona","lisbon","porto","rome","prague","berlin"];
+    const plane = ["lisbon","porto","rome","prague"];
+    const over = ["bruges","strasbourg","cologne","amsterdam","london","barcelona","berlin"];
+    const r = (ids) => ids.map((id) => "#mt-r-" + id);
+    const s = (ids) => ids.map((id) => "#mt-s-" + id);
+    const pulse = (id, at) => tl.fromTo(id, { scale: 1 }, { scale: 1.12, duration: 0.12, ease: "power2.out", yoyo: true, repeat: 1 }, at);
+
+    tl.fromTo("#mt-ground", { backgroundColor: "#FFD9C2" }, { backgroundColor: "#FFF3E4", duration: 0.4, ease: "power2.inOut" }, 0);
+    tl.set(["#mt-st1", "#mt-st3"], { rotation: -2 }, 0);
+    tl.set("#mt-st2", { rotation: 2 }, 0);
+    tl.fromTo("#mt-title", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power2.out" }, 0.2);
+    // Rows drop in like split-flap panels.
+    tl.fromTo(r(all), { rotationX: -95, transformOrigin: "50% 0%", opacity: 0 }, { rotationX: 0, opacity: 1, duration: 0.4, ease: "back.out(1.4)", stagger: 0.04 }, 0.3);
+
+    // Filter 1: train. Plane-only cities are stamped out.
+    pulse("#mt-st2", 1.35);
+    tl.fromTo(plane.map((id) => "#mt-p-" + id), { opacity: 0 }, { opacity: 1, duration: 0.15, ease: "none" }, 1.0);
+    tl.fromTo(s(plane), { opacity: 0, scale: 1.8, rotation: -14 }, { opacity: 1, scale: 1, rotation: -6, duration: 0.22, ease: "back.out(1.7)", stagger: 0.09 }, 1.5);
+    tl.to(plane.map((id) => "#mt-p-" + id), { opacity: 0, duration: 0.1, ease: "none", stagger: 0.09 }, 1.55);
+    tl.to(r(plane), { opacity: 0.4, duration: 0.2, ease: "none", stagger: 0.09 }, 1.62);
+    // Prices print in for the train cities.
+    tl.fromTo([...all.filter((id) => !plane.includes(id))].map((id) => "#mt-p-" + id), { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13, ease: "power2.out", stagger: 0.04 }, 2.05);
+    // Filter 2: budget. Everything over €150 is stamped out.
+    pulse("#mt-st1", 2.75);
+    tl.fromTo(s(over), { opacity: 0, scale: 1.8, rotation: -14 }, { opacity: 1, scale: 1, rotation: -6, duration: 0.22, ease: "back.out(1.7)", stagger: 0.09 }, 2.9);
+    tl.to(over.map((id) => "#mt-p-" + id), { opacity: 0, duration: 0.1, ease: "none", stagger: 0.09 }, 2.95);
+    tl.to(r(over), { opacity: 0.4, duration: 0.2, ease: "none", stagger: 0.09 }, 3.02);
+    // Filter 3: culture. Brussels wins (same score as Ghent, cheaper).
+    pulse("#mt-st3", 3.55);
+    tl.fromTo(["#mt-t-lille", "#mt-t-brussels", "#mt-t-ghent"], { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.2, ease: "expo.out", stagger: 0.08 }, 3.65);
+    tl.to(["#mt-r-lille", "#mt-r-ghent"], { opacity: 0.4, duration: 0.2, ease: "none" }, 3.95);
+    tl.to("#mt-r-brussels", { backgroundColor: "#FF5C4D", duration: 0.15, ease: "none" }, 4.0);
+    tl.fromTo("#mt-match", { opacity: 0, scale: 1.6, rotation: 10 }, { opacity: 1, scale: 1, rotation: 3, duration: 0.3, ease: "back.out(1.7)" }, 4.0);
+
+    // The Brussels row grows into the ticket; the rest of the board blurs away.
+    tl.to(["#mt-board", "#mt-title"], { opacity: 0, filter: "blur(15px)", duration: 0.3, ease: "power2.in" }, 4.45);
+    tl.fromTo("#mt-ticket", { opacity: 1, x: -250, y: -231, scaleX: 0.5, scaleY: 0.145 }, { opacity: 1, x: 0, y: 0, scaleX: 1, scaleY: 1, duration: 0.6, ease: "power3.inOut", immediateRender: false }, 4.4);
+    tl.fromTo("#mt-tk-fill", { opacity: 1 }, { opacity: 0, duration: 0.25, ease: "none" }, 4.8);
+    tl.fromTo(["#mt-l1", "#mt-l2", "#mt-l3"], { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.25, ease: "expo.out", stagger: 0.1 }, 4.95);
+    // The total counts up and lands on the impact.
+    tl.fromTo("#mt-sum", { innerText: 0 }, { innerText: 136, snap: { innerText: 1 }, duration: 0.55, ease: "power2.out" }, 5.05);
+    tl.fromTo("#mt-tk-total b", { scale: 1.25, transformOrigin: "100% 100%" }, { scale: 1, duration: 0.35, ease: "back.out(2)" }, 5.6);
+    tl.fromTo("#mt-yours", { opacity: 0, scale: 1.8, rotation: -16 }, { opacity: 1, scale: 1, rotation: 4, duration: 0.3, ease: "back.out(1.7)" }, 5.6);
+    tl.fromTo("#mt-note", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "none" }, 5.1);
+    window.__timelines["match"] = tl;
+  </script>
+</template>

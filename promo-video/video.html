@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Weekend Escape promo</title>
+<style>
+@font-face{font-family:"Bricolage Grotesque";font-weight:800;src:url(node_modules/@fontsource/bricolage-grotesque/files/bricolage-grotesque-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:"Bricolage Grotesque";font-weight:700;src:url(node_modules/@fontsource/bricolage-grotesque/files/bricolage-grotesque-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"DM Sans";font-weight:400;src:url(node_modules/@fontsource/dm-sans/files/dm-sans-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"DM Sans";font-weight:500;src:url(node_modules/@fontsource/dm-sans/files/dm-sans-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"DM Sans";font-weight:700;src:url(node_modules/@fontsource/dm-sans/files/dm-sans-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"DM Mono";font-weight:500;src:url(node_modules/@fontsource/dm-mono/files/dm-mono-latin-500-normal.woff2) format("woff2")}
+
+/* Site tokens ("sunset ticket"). Sizes are scaled x2.8 from the 390px mobile site to the 1080px frame,
+   so the 2.5px ink line becomes 7px and the 5px offset shadow becomes 14px. */
+:root {
+  --cream: #FFF3E4; --paper: #FFFCF7; --ink: #231B2E; --ink-soft: #5B5167;
+  --coral: #FF5C4D; --coral-text: #C8301F; --sun: #FFB92E; --peach: #FFD9C2; --mint: #1FB89A;
+  --line: 7px solid var(--ink); --shadow: 14px 14px 0 var(--ink);
+  --display: "Bricolage Grotesque", sans-serif; --body: "DM Sans", sans-serif; --mono: "DM Mono", monospace;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--cream); }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--cream); color: var(--ink); font-family: var(--body); }
+.scene { position: absolute; inset: 0; display: none; }
+.abs { position: absolute; }
+.w { display: inline-block; will-change: transform; }
+
+.title { font: 800 176px/1 var(--display); letter-spacing: -.035em; margin: 0; }
+.title .line { display: block; white-space: nowrap; }
+.cap { font: 800 112px/1.02 var(--display); letter-spacing: -.03em; margin: 0; white-space: nowrap; }
+.hl { position: relative; display: inline-block; z-index: 0; }
+.hl > i { position: absolute; left: -.04em; right: -.04em; bottom: .08em; height: .36em; background: var(--coral); z-index: -1; transform-origin: left; transform: scaleX(0); }
+.chip { display: inline-flex; align-items: center; gap: 18px; background: var(--paper); border: var(--line); border-radius: 999px; padding: 14px 34px 14px 16px; font: 700 40px var(--body); box-shadow: 8px 8px 0 var(--ink); white-space: nowrap; }
+.chip img { width: 64px; height: 64px; }
+.mono { font-family: var(--mono); font-weight: 500; letter-spacing: .06em; }
+.dots { position: absolute; inset: 0; background: radial-gradient(rgba(35,27,46,.11) 4px, transparent 4.5px) 0 0 / 62px 62px; }
+.ground { position: absolute; left: 0; right: 0; top: 1500px; bottom: 0; background: var(--peach); border-top: var(--line); }
+
+/* Phone */
+.phone { position: absolute; width: 662px; height: 1384px; background: var(--ink); border: var(--line); border-radius: 80px; padding: 14px; box-shadow: 20px 20px 0 var(--coral); }
+.screen { position: relative; width: 620px; height: 1342px; border-radius: 64px; overflow: hidden; background: var(--cream); }
+.screen img { position: absolute; left: 0; top: 58px; width: 620px; height: 1342px; } /* below the island, like a status bar */
+.island { position: absolute; left: 50%; top: 18px; width: 150px; height: 42px; margin-left: -75px; background: var(--ink); border-radius: 99px; z-index: 3; }
+.tap { position: absolute; width: 110px; height: 110px; margin: -55px 0 0 -55px; border-radius: 50%; background: rgba(255,252,247,.55); border: 7px solid var(--ink); z-index: 4; }
+.ring { position: absolute; width: 110px; height: 110px; margin: -55px 0 0 -55px; border-radius: 50%; border: 6px solid var(--coral); z-index: 4; }
+
+/* Answer chips (quiz) */
+.ans { position: absolute; top: 520px; width: 300px; background: var(--paper); border: var(--line); border-radius: 26px; padding: 14px 20px 16px; box-shadow: 8px 8px 0 var(--ink); }
+.ans .mono { font-size: 22px; color: var(--ink-soft); }
+.ans b { display: block; font: 700 36px/1.15 var(--body); white-space: nowrap; }
+.ans b::after { content: " ✓"; color: var(--mint); }
+
+/* Destination tickets */
+.tkt { position: absolute; left: 90px; width: 900px; height: 270px; display: flex; background: var(--bg, var(--paper)); border: var(--line); border-radius: 34px; box-shadow: var(--shadow); }
+.tkt__main { flex: 1; padding: 30px 36px; position: relative; min-width: 0; }
+.tkt__main .route { font-size: 26px; color: var(--ink-soft); }
+.tkt__main .city { font: 800 92px/1 var(--display); letter-spacing: -.03em; margin: 10px 0 14px; white-space: nowrap; }
+.tkt__main .meta { font: 500 28px var(--body); white-space: nowrap; }
+.tkt__main .em { position: absolute; right: 30px; top: 22px; font-size: 72px; }
+.tkt__stub { width: 300px; border-left: 6px dashed var(--ink); display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; }
+.tkt__stub::before, .tkt__stub::after { content: ""; position: absolute; left: -27px; width: 48px; height: 48px; border-radius: 50%; background: var(--cream); border: var(--line); }
+.tkt__stub::before { top: -31px; clip-path: inset(50% 0 0 0); } .tkt__stub::after { bottom: -31px; clip-path: inset(0 0 50% 0); }
+.tkt__stub .mono { font-size: 24px; text-transform: uppercase; }
+.tkt__stub .price { font: 800 92px/1 var(--display); letter-spacing: -.03em; margin-top: 6px; }
+
+.back { position: absolute; left: 90px; width: 900px; background: var(--paper); border: var(--line); border-radius: 34px; box-shadow: var(--shadow); backface-visibility: hidden; }
+.back__head { padding: 34px 44px 30px; background: var(--peach); border-radius: 27px 27px 0 0; }
+.back__head .mono { font-size: 26px; }
+.back__head h3 { font: 800 76px/1 var(--display); letter-spacing: -.03em; margin: 10px 0 0; }
+.perf { position: relative; border-top: 6px dashed var(--ink); }
+.perf::before, .perf::after { content: ""; position: absolute; top: -27px; width: 48px; height: 48px; border-radius: 50%; background: var(--cream); border: var(--line); }
+.perf::before { left: -31px; clip-path: inset(0 0 0 50%); } .perf::after { right: -31px; clip-path: inset(0 50% 0 0); }
+.back__body { padding: 30px 44px 20px; }
+.day { margin-bottom: 24px; }
+.day__t { font: 700 28px var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--coral-text); }
+.day ul { margin: 6px 0 0; padding-left: 1.1em; font: 500 34px/1.3 var(--body); }
+.back__foot { padding: 24px 44px 30px; display: flex; justify-content: space-between; align-items: baseline; }
+.back__foot b { font: 800 60px var(--display); }
+.back__foot .mono { font-size: 24px; color: var(--ink-soft); }
+
+/* Inbox */
+.notif { position: absolute; left: 80px; width: 920px; background: var(--paper); border: var(--line); border-radius: 44px; padding: 30px 36px 34px; box-shadow: 14px 14px 0 var(--sun); display: grid; grid-template-columns: 104px 1fr; gap: 6px 26px; }
+.notif img { width: 104px; height: 104px; grid-row: span 3; }
+.notif .top { display: flex; justify-content: space-between; font-size: 26px; color: var(--ink-soft); }
+.notif b { font: 800 52px/1.05 var(--display); letter-spacing: -.02em; }
+.notif p { margin: 4px 0 0; font: 500 34px/1.3 var(--body); }
+
+/* CTA */
+.url { display: inline-block; background: var(--ink); color: var(--cream); border: var(--line); border-radius: 999px; padding: 30px 48px; font: 700 46px var(--body); box-shadow: 12px 12px 0 var(--sun); white-space: nowrap; }
+.fine { font-size: 34px; color: var(--ink); }
+
+#wipe { position: absolute; top: 0; bottom: 0; left: 0; width: 1300px; z-index: 50; border-left: var(--line); border-right: var(--line); }
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- 1. HOOK -->
+  <section class="scene" id="s-hook">
+    <svg class="abs sun" id="hook-sun" width="1000" height="1000" viewBox="-500 -500 1000 1000" style="left:40px"></svg>
+    <div class="ground"></div>
+    <div class="abs" style="left:80px;top:230px"><span class="chip w" id="hook-chip"><img class="logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTgiIGZpbGw9IiNGRjVDNEQiLz48Y2lyY2xlIGN4PSIzMiIgY3k9IjM2IiByPSIxNSIgZmlsbD0iI0ZGQjkyRSIvPjxwYXRoIGQ9Ik00IDQ0aDU2djIwSDR6IiBmaWxsPSIjRkY1QzREIi8+PHBhdGggZD0iTTEyIDQ2aDQwIiBzdHJva2U9IiMyMzFCMkUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTIyIDIybDIyLTgtNiAxNHoiIGZpbGw9IiMyMzFCMkUiLz48L3N2Zz4K" alt="">Weekend Escape</span></div>
+    <h1 class="title abs" style="left:80px;top:400px">
+      <span class="line"><span class="w" data-hook="0">Free</span></span>
+      <span class="line"><span class="w" data-hook="1">weekend.</span></span>
+      <span class="line"><span class="w hl" data-hook="2"><i></i>€150.</span></span>
+      <span class="line"><span class="w" data-hook="3">Now</span> <span class="w" data-hook="4">what?</span></span>
+    </h1>
+    <div class="abs" id="hook-tk" style="left:300px;top:1590px">
+      <div class="chip mono" style="font-size:34px;border-radius:22px;padding:18px 30px">PARIS → ??? · FRI–SUN</div>
+    </div>
+  </section>
+
+  <!-- 2. QUIZ (real captures of the local site) -->
+  <section class="scene" id="s-quiz" style="background:var(--peach)">
+    <div class="dots"></div>
+    <div class="abs" style="left:80px;top:210px">
+      <p class="cap"><span class="w" data-q="0">3 questions.</span></p>
+      <p class="cap"><span class="w hl" data-q="1"><i></i>30 seconds.</span></p>
+    </div>
+    <div id="answers"></div>
+    <div class="phone" id="quiz-phone" style="left:209px;top:660px">
+      <div class="screen" id="quiz-screen"><div class="island"></div></div>
+    </div>
+  </section>
+
+  <!-- 3. THE MATCH (data/destinations.json) -->
+  <section class="scene" id="s-match">
+    <div class="abs" style="left:80px;top:200px">
+      <p class="cap" style="font-size:88px"><span class="w" data-m="0">Transport +</span></p>
+      <p class="cap" style="font-size:88px"><span class="w" data-m="1">2 nights + food.</span></p>
+      <p class="cap" style="font-size:88px"><span class="w hl" data-m="2"><i></i>One price.</span></p>
+    </div>
+    <div id="tickets" style="perspective:2400px;position:absolute;inset:0"></div>
+    <div class="abs mono" id="match-note" style="left:90px;top:1560px;font-size:26px;color:var(--ink-soft)">Estimates from our destination data · not live prices</div>
+  </section>
+
+  <!-- 4. INBOX -->
+  <section class="scene" id="s-inbox" style="background:var(--ink)">
+    <svg class="abs sun" id="inbox-sun" width="700" height="700" viewBox="-500 -500 1000 1000" style="left:560px;top:-250px;opacity:.95"></svg>
+    <div class="abs" style="left:80px;top:220px;color:var(--cream)">
+      <p class="cap"><span class="w" data-i="0">Straight to</span></p>
+      <p class="cap"><span class="w" data-i="1">your</span> <span class="w hl" data-i="2"><i></i>inbox.</span></p>
+    </div>
+    <div class="phone" id="inbox-phone" style="left:209px;top:700px;border-color:var(--cream);box-shadow:20px 20px 0 var(--coral)">
+      <div class="screen" style="background:var(--peach)">
+        <div class="island"></div>
+        <div style="position:absolute;top:110px;width:100%;text-align:center">
+          <div style="font:500 34px var(--body)">Friday</div>
+          <div style="font:800 150px/1 var(--display);letter-spacing:-.03em">18:30</div>
+        </div>
+        <svg class="abs sun" width="700" height="700" viewBox="-500 -500 1000 1000" style="left:-40px;top:860px"></svg>
+      </div>
+    </div>
+    <div class="notif" id="notif" style="top:1110px">
+      <img class="logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTgiIGZpbGw9IiNGRjVDNEQiLz48Y2lyY2xlIGN4PSIzMiIgY3k9IjM2IiByPSIxNSIgZmlsbD0iI0ZGQjkyRSIvPjxwYXRoIGQ9Ik00IDQ0aDU2djIwSDR6IiBmaWxsPSIjRkY1QzREIi8+PHBhdGggZD0iTTEyIDQ2aDQwIiBzdHJva2U9IiMyMzFCMkUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTIyIDIybDIyLTgtNiAxNHoiIGZpbGw9IiMyMzFCMkUiLz48L3N2Zz4K" alt="">
+      <div class="top mono"><span>WEEKEND ESCAPE</span><span>now</span></div>
+      <b>Your weekend plan is ready</b>
+      <p id="notif-body"></p>
+    </div>
+  </section>
+
+  <!-- 5. CTA -->
+  <section class="scene" id="s-cta">
+    <svg class="abs sun" id="cta-sun" width="1000" height="1000" viewBox="-500 -500 1000 1000" style="left:40px"></svg>
+    <div class="ground"></div>
+    <div class="abs" style="left:80px;top:220px"><span class="chip"><img class="logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTgiIGZpbGw9IiNGRjVDNEQiLz48Y2lyY2xlIGN4PSIzMiIgY3k9IjM2IiByPSIxNSIgZmlsbD0iI0ZGQjkyRSIvPjxwYXRoIGQ9Ik00IDQ0aDU2djIwSDR6IiBmaWxsPSIjRkY1QzREIi8+PHBhdGggZD0iTTEyIDQ2aDQwIiBzdHJva2U9IiMyMzFCMkUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTIyIDIybDIyLTgtNiAxNHoiIGZpbGw9IiMyMzFCMkUiLz48L3N2Zz4K" alt="">Weekend Escape</span></div>
+    <h2 class="title abs" style="left:80px;top:390px;font-size:122px">
+      <span class="line"><span class="w" data-c="0">Escape Paris</span></span>
+      <span class="line"><span class="w" data-c="1">this weekend.</span></span>
+      <span class="line"><span class="w hl" data-c="2"><i></i>Not your</span></span>
+      <span class="line"><span class="w hl" data-c="3"><i></i>budget.</span></span>
+    </h2>
+    <div class="abs" style="left:80px;top:960px"><span class="url w" id="cta-url">weekend-escape-kappa.vercel.app</span></div>
+    <div class="abs fine mono w" id="cta-fine" style="left:84px;top:1130px">Prices are estimates.</div>
+  </section>
+
+  <div id="wipe"></div>
+</div>
+
+<script>
+/* ---------- One timeline, one parameter: seek(t) in seconds. No CSS animation, no clock. ---------- */
+const DUR = 25;
+const SCENES = [["s-hook", 0, 3], ["s-quiz", 3, 9], ["s-match", 9, 17], ["s-inbox", 17, 22], ["s-cta", 22, 25]];
+const WIPES = [[3, "var(--sun)"], [9, "var(--coral)"], [17, "var(--mint)"], [22, "var(--coral)"]];
+// The three tickets shown, in order (ids from data/destinations.json). Brussels gets flipped.
+const PICK = ["lille", "brussels", "lisbon"];
+const FLIP = "brussels";
+const TICKET_BG = ["#FFF0C2", "var(--paper)", "#FFD9C2"];
+const MODE = { train: "🚆", plane: "✈️" };
+
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const cl = (x) => Math.min(1, Math.max(0, x));
+const p = (t, a, b) => cl((t - a) / (b - a));
+const lerp = (a, b, x) => a + (b - a) * x;
+const eo = (x) => 1 - Math.pow(1 - x, 3);
+const eio = (x) => (x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+const eb = (x) => { const c = 1.9; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const css = (el, o) => Object.assign(el.style, o);
+
+// Word/element pop-in: rises, overshoots a little, settles.
+function pop(el, t, start, { dur = .45, dy = 90, rot = 0, base = "" } = {}) {
+  const x = p(t, start, start + dur);
+  css(el, { opacity: cl(x * 3), transform: `${base} translateY(${(1 - eb(x)) * dy}px) rotate(${(1 - x) * rot}deg)` });
+}
+const highlight = (el, t, start) => { const i = $("i", el); if (i) i.style.transform = `scaleX(${eo(p(t, start, start + .35))})`; };
+
+// Striped "sunset" sun: flat sun disc, cream bands thickening towards the bottom, ink outline.
+function drawSun(svg, band = "var(--cream)") {
+  let bands = "", y = 40;
+  for (let k = 0; y < 500; k++) { const h = 12 + k * 7; bands += `<rect x="-500" y="${y}" width="1000" height="${h}" fill="${band}"/>`; y += h + 46 - k * 3; }
+  svg.innerHTML = `<defs><clipPath id="c${svg.id || Math.random()}"><circle r="478"/></clipPath></defs>
+    <circle r="478" fill="#FFB92E"/><g clip-path="url(#c${svg.id || ""})">${bands}</g>
+    <circle r="478" fill="none" stroke="#231B2E" stroke-width="10"/>`;
+  // clip ids must match
+  const id = svg.querySelector("clipPath").id; svg.querySelector("g").setAttribute("clip-path", `url(#${id})`);
+}
+
+/* ---------- Build (data-driven) ---------- */
+let DATA, TAPS, tickets = [], back;
+async function build() {
+  const [dest, taps] = await Promise.all([fetch("../data/destinations.json").then((r) => r.json()), fetch("capture/taps.json").then((r) => r.json())]);
+  DATA = PICK.map((id) => {
+    const d = dest.destinations.find((x) => x.id === id);
+    const tr = d.transport.reduce((a, b) => (b.price < a.price ? b : a)); // cheapest option, as the site does for "either"
+    const cost = { transport: tr.price, stay: d.stay_per_night * dest.nights, food: d.food };
+    return { d, tr, cost, total: cost.transport + cost.stay + cost.food };
+  });
+  TAPS = taps.taps;
+
+  $$("svg.sun").forEach((s) => drawSun(s));
+  drawSun($("#inbox-sun"), "var(--ink)");
+
+  // Quiz screens: q1, q1-picked, q2, ...
+  const scr = $("#quiz-screen");
+  for (let q = 1; q <= 3; q++) for (const s of ["", "-picked"]) scr.insertAdjacentHTML("beforeend", `<img id="shot${q}${s}" src="capture/q${q}${s}.png" alt="">`);
+  scr.insertAdjacentHTML("beforeend", `<div class="tap" id="q-tap"></div><div class="ring" id="q-ring"></div>`);
+  const names = ["Budget", "Transport", "Vibe"];
+  $("#answers").innerHTML = TAPS.map((a, i) => `<div class="ans" id="ans${i}" style="left:${80 + i * 320}px"><span class="mono">Q${i + 1} · ${names[i].toUpperCase()}</span><b>${a.label.replace(/\s*–\s*/, "–")}</b></div>`).join("");
+
+  // Tickets
+  $("#tickets").innerHTML = DATA.map(({ d, tr, cost, total }, i) => `
+    <div class="tkt" id="tk-${d.id}" style="--bg:${TICKET_BG[i]};top:${600 + i * 310}px">
+      <div class="tkt__main">
+        <div class="route mono">PARIS → ${d.city.toUpperCase()} · ${MODE[tr.mode]} ${tr.duration}</div>
+        <div class="city">${d.city}</div>
+        <div class="meta">€${cost.transport} ${tr.mode} + €${cost.stay} stay + €${cost.food} food</div>
+        <span class="em">${d.emoji}</span>
+      </div>
+      <div class="tkt__stub"><span class="mono">est. total</span><span class="price">~€${total}</span></div>
+    </div>`).join("");
+  tickets = DATA.map(({ d }) => $(`#tk-${d.id}`));
+
+  const f = DATA.find((x) => x.d.id === FLIP);
+  const days = ["friday", "saturday", "sunday"];
+  $("#tickets").insertAdjacentHTML("beforeend", `
+    <div class="back" id="back">
+      <div class="back__head"><span class="mono">PARIS → ${f.d.city.toUpperCase()} · FRI → SUN</span><h3>Your weekend plan</h3></div>
+      <div class="perf"></div>
+      <div class="back__body">${days.map((k) => `<div class="day"><div class="day__t">${k}</div><ul>${f.d.plan[k].slice(0, 2).map((s) => `<li>${s}</li>`).join("")}</ul></div>`).join("")}</div>
+      <div class="perf"></div>
+      <div class="back__foot"><span class="mono">TRANSPORT + 2 NIGHTS + FOOD</span><b>~€${f.total} <span class="mono" style="font-size:24px">EST.</span></b></div>
+    </div>`);
+  back = $("#back");
+  $("#notif-body").textContent = `${f.d.city} · Fri → Sun · est. €${f.total} total`;
+
+  await document.fonts.ready;
+  await Promise.all($$("img").map((i) => (i.complete ? 0 : new Promise((ok) => (i.onload = i.onerror = ok)))));
+  // measure while the scene is displayed (display:none gives height 0)
+  $("#s-match").style.display = "block";
+  back.style.top = (1060 - back.offsetHeight / 2) + "px";
+  $("#s-match").style.display = "none";
+}
+
+/* ---------- Scenes: each is a pure function of its local time ---------- */
+function hook(t) {
+  const s = eo(p(t, 0, 1.3));
+  css($("#hook-sun"), { top: lerp(1700, 1000, s) + "px" });
+  pop($("#hook-chip"), t, -.3, { dy: 40 });
+  // Word by word. "Free" starts before frame 0 so the hook reads from the very first frame.
+  const at = [-.2, .15, .6, 1.15, 1.35];
+  $$("[data-hook]").forEach((w, i) => pop(w, t, at[i], { rot: i % 2 ? 3 : -3 }));
+  highlight($("[data-hook='2']"), t, .85);
+  pop($("#hook-tk"), t, 1.8, { dy: 120, rot: 8, base: "rotate(-4deg)" });
+}
+
+function quiz(t) {
+  $$("[data-q]").forEach((w, i) => pop(w, t, .15 + i * .35));
+  highlight($("[data-q='1']"), t, .75);
+  pop($("#quiz-phone"), t, 0, { dur: .6, dy: 500, base: "rotate(-2deg)" });
+
+  // Three taps: [screen visible from, tap moment]
+  const Q = [[0, 1.05], [1.75, 2.75], [3.45, 4.45]];
+  const shots = [];
+  Q.forEach(([from, tap], i) => {
+    const next = Q[i + 1] ? Q[i + 1][0] : 99;
+    const vis = t >= from - .2 && t < next;
+    const fadeIn = i === 0 ? 1 : p(t, from - .2, from);
+    shots.push([`shot${i + 1}`, vis ? fadeIn : 0], [`shot${i + 1}-picked`, vis && t >= tap + .08 ? fadeIn : 0]);
+    const ans = $(`#ans${i}`);
+    pop(ans, t, tap + .2, { dy: 60, rot: i % 2 ? 4 : -4, base: `rotate(${i % 2 ? 2 : -2}deg)` });
+  });
+  shots.forEach(([id, o]) => ($("#" + id).style.opacity = o));
+
+  // Tap indicator: glides in, presses, ripples.
+  let cur = Q.findIndex(([from], i) => t < (Q[i + 1] ? Q[i + 1][0] : 99));
+  if (cur < 0) cur = 2;
+  const [from, tap] = Q[cur], tg = TAPS[cur];
+  const appear = p(t, tap - .5, tap - .25), leave = p(t, tap + .35, tap + .55);
+  const press = t >= tap && t < tap + .18 ? .82 : 1;
+  css($("#q-tap"), { left: tg.x * 620 + 40 * (1 - eo(p(t, tap - .5, tap - .05))) + "px", top: 58 + tg.y * 1342 + 50 * (1 - eo(p(t, tap - .5, tap - .05))) + "px", opacity: appear * (1 - leave), transform: `scale(${press})` });
+  const r = p(t, tap, tap + .45);
+  css($("#q-ring"), { left: tg.x * 620 + "px", top: 58 + tg.y * 1342 + "px", opacity: r > 0 && r < 1 ? 1 - r : 0, transform: `scale(${1 + r * 1.6})` });
+}
+
+function match(t) {
+  $$("[data-m]").forEach((w, i) => pop(w, t, .1 + i * .3));
+  highlight($("[data-m='2']"), t, .85);
+  const rots = [-2.5, 1.5, -1.5];
+  const focus = eio(p(t, 3.3, 4.0));       // others leave, Brussels centres
+  const flip = eio(p(t, 4.0, 4.7));         // 0 → 180deg
+  tickets.forEach((el, i) => {
+    const x = eo(p(t, .6 + i * .3, 1.2 + i * .3));
+    const isF = DATA[i].d.id === FLIP;
+    if (!isF) {
+      css(el, { opacity: x * (1 - focus), transform: `translateX(${(1 - x) * 1100 + (i ? 1 : -1) * focus * 1200}px) rotate(${rots[i]}deg)` });
+    } else {
+      const dy = (1060 - (600 + i * 310 + 135)) * focus;
+      const ang = flip * 180;
+      css(el, { opacity: x, visibility: ang < 90 ? "visible" : "hidden", transform: `translateX(${(1 - x) * 1100}px) translateY(${dy}px) rotate(${rots[i] * (1 - focus)}deg) rotateY(${ang}deg) scale(${1 + .03 * focus})` });
+    }
+  });
+  const ang = flip * 180;
+  css(back, { visibility: ang >= 90 ? "visible" : "hidden", transform: `rotateY(${ang - 180}deg)` });
+  $$(".day", back).forEach((d, i) => pop(d, t, 4.5 + i * .22, { dy: 30 }));
+  pop($("#match-note"), t, 1.6, { dy: 20 });
+  $("#match-note").style.opacity *= 1 - focus;
+}
+
+function inbox(t) {
+  pop($("[data-i='0']"), t, .1); pop($("[data-i='1']"), t, .35); pop($("[data-i='2']"), t, .55);
+  highlight($("[data-i='2']"), t, .8);
+  pop($("#inbox-phone"), t, 0, { dur: .7, dy: 700 });
+  const n = p(t, .9, 1.45);
+  css($("#notif"), { opacity: cl(n * 3), transform: `translateY(${(1 - eb(n)) * -260}px) scale(${lerp(.92, 1, eb(n))})` });
+  // a gentle "ding" nudge once it has landed
+  const d = p(t, 2.2, 2.6);
+  if (d > 0 && d < 1) $("#notif").style.transform = `rotate(${Math.sin(d * Math.PI * 3) * 1.2 * (1 - d)}deg)`;
+}
+
+function cta(t) {
+  css($("#cta-sun"), { top: lerp(1000, 1180, eo(p(t, 0, 3))) + "px" });
+  $$("[data-c]").forEach((w, i) => pop(w, t, .05 + i * .22, { rot: i % 2 ? 2 : -2 }));
+  highlight($("[data-c='2']"), t, .65); highlight($("[data-c='3']"), t, .8);
+  pop($("#cta-url"), t, 1.0, { dy: 80 });
+  pop($("#cta-fine"), t, 1.3, { dy: 20 });
+  // the link gets "pressed" once, like the site's buttons (no finger: keeps the URL fully readable)
+  const press = t >= 1.9 && t < 2.1;
+  if (press) $("#cta-url").style.transform += " translate(6px,6px)";
+}
+
+const RUN = { "s-hook": hook, "s-quiz": quiz, "s-match": match, "s-inbox": inbox, "s-cta": cta };
+
+window.seek = (t) => {
+  for (const [id, a, b] of SCENES) {
+    const on = t >= a && (t < b || (b === DUR && t <= b));
+    $("#" + id).style.display = on ? "block" : "none";
+    if (on) RUN[id](t - a);
+  }
+  // Ticket-coloured wipe, fully covering the frame at each cut.
+  const w = $("#wipe"); w.style.display = "none";
+  for (const [at, color] of WIPES) {
+    const x = p(t, at - .22, at + .22);
+    if (x > 0 && x < 1) css(w, { display: "block", background: color, transform: `translateX(${lerp(1100, -1330, eio(x))}px) skewX(-8deg)` });
+  }
+};
+
+window.ready = build().then(() => seek(+(new URLSearchParams(location.search).get("t") || 0)));
+</script>
+</body>
+</html>

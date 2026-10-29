@@ -1,0 +1,50 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: var(--cream); overflow: hidden; }
+    #hook-dots { position: absolute; inset: 0; background: radial-gradient(rgba(35, 27, 46, 0.1) 4px, transparent 4.5px) 0 0 / 62px 62px; }
+    #hook-sun { position: absolute; left: 90px; top: 1180px; width: 900px; height: 900px; }
+    #hook-ground { position: absolute; left: 0; right: 0; top: 1560px; bottom: 0; background: var(--peach); border-top: var(--line); }
+    #hook-copy { position: absolute; left: 84px; top: 200px; width: 920px; }
+    #hook-day { font: 700 52px var(--body); letter-spacing: 0.14em; color: var(--coral-text); }
+    #hook-clock { font: 800 300px/0.95 var(--display); letter-spacing: -0.04em; margin-top: 4px; }
+    .hook-line { font: 800 132px/1.02 var(--display); letter-spacing: -0.035em; white-space: nowrap; }
+    #hook-l1 { margin-top: 40px; }
+    .hl { position: relative; display: inline-block; z-index: 0; }
+    .hl-bar { position: absolute; left: -0.04em; right: -0.04em; bottom: 0.1em; height: 0.34em; background: var(--coral); z-index: -1; transform-origin: left center; }
+    #hook-what { position: absolute; left: 300px; top: 1010px; background: var(--coral); color: var(--paper); border: var(--line); border-radius: 30px; box-shadow: var(--shadow); padding: 18px 44px 26px; font: 800 120px/1 var(--display); letter-spacing: -0.03em; white-space: nowrap; }
+  </style>
+  <div data-hf-id="hf-srfg" id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+    <div data-hf-id="hf-vjfl" id="hook-dots"></div>
+    <svg data-hf-id="hf-xhtk" id="hook-sun" viewBox="-500 -500 1000 1000" aria-hidden="true">
+      <defs data-hf-id="hf-mh0t"><clipPath data-hf-id="hf-wn0k" id="hook-sun-clip"><circle data-hf-id="hf-bqb4" r="478" /></clipPath></defs>
+      <circle data-hf-id="hf-en3d" r="478" fill="#FFB92E" />
+      <g data-hf-id="hf-0n0f" clip-path="url(#hook-sun-clip)" fill="#FFF3E4">
+        <rect data-hf-id="hf-cns0" x="-500" y="40" width="1000" height="12" /><rect data-hf-id="hf-2aga" x="-500" y="98" width="1000" height="19" />
+        <rect data-hf-id="hf-y3k2" x="-500" y="160" width="1000" height="26" /><rect data-hf-id="hf-zbtl" x="-500" y="226" width="1000" height="33" />
+        <rect data-hf-id="hf-uapu" x="-500" y="296" width="1000" height="40" /><rect data-hf-id="hf-p0cs" x="-500" y="370" width="1000" height="47" />
+        <rect data-hf-id="hf-jiuz" x="-500" y="440" width="1000" height="60" />
+      </g>
+      <circle data-hf-id="hf-1d7o" r="478" fill="none" stroke="#231B2E" stroke-width="10" />
+    </svg>
+    <div data-hf-id="hf-m8m8" id="hook-ground"></div>
+    <div data-hf-id="hf-8b76" id="hook-copy">
+      <div data-hf-id="hf-5uyu" id="hook-day">FRIDAY</div>
+      <div data-hf-id="hf-3ba5" id="hook-clock">18:30</div>
+      <div data-hf-id="hf-15os" class="hook-line" id="hook-l1">Free weekend.</div>
+      <div data-hf-id="hf-1lpj" class="hook-line" id="hook-l2"><span data-hf-id="hf-8x2f" class="hl"><i data-hf-id="hf-1ufz" class="hl-bar" id="hook-bar"></i>€150</span> budget.</div>
+    </div>
+    <div data-hf-id="hf-34qi" id="hook-what">Now what?</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // Frame 0 already reads: FRIDAY / 18:30 / Free weekend.
+    tl.fromTo("#hook-sun", { y: 420 }, { y: 0, duration: 1.6, ease: "expo.out" }, 0);
+    tl.fromTo("#hook-l2", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.45);
+    tl.fromTo("#hook-bar", { scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power3.out" }, 0.85);
+    // "Now what?" is stamped on, like a sticker slapped down.
+    tl.fromTo("#hook-what", { opacity: 0, scale: 1.7, rotation: -14 }, { opacity: 1, scale: 1, rotation: -5, duration: 0.42, ease: "back.out(1.7)" }, 1.95);
+    // Everything is pushed up as the browser rises in the next scene.
+    tl.to(["#hook-copy", "#hook-what", "#hook-sun", "#hook-ground"], { y: "-=520", duration: 0.28, ease: "power3.in" }, 2.92);
+    window.__timelines["hook"] = tl;
+  </script>
+</template>

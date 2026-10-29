@@ -1,0 +1,3346 @@
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 3,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "negative_z_index",
+        "severity": "warning",
+        "message": "`z-index: -1` paints the element behind its nearest stacking context's own content. With no stacking-context ancestor that context is the composition root itself, so an opaque background there hides it entirely: in the DOM, laid out, and absent from the picture. A transparent root leaves it visible. Siblings at `z-index: 0` or above are unaffected.",
+        "selector": ".hl-bar",
+        "dataAttributes": {},
+        "sourceFile": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/compositions/endcard.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Give the element's parent a stacking context - `isolation: isolate` is the cheapest, and `transform`, `filter`, `opacity` below 1, `contain: paint` and `will-change` all work too. The negative-z child then paints above that parent's background and renders normally. Or express paint order through DOM order - an earlier sibling paints behind a later one - and raise the elements that should sit in front rather than lowering this one."
+      },
+      {
+        "code": "negative_z_index",
+        "severity": "warning",
+        "message": "`z-index: -1` paints the element behind its nearest stacking context's own content. With no stacking-context ancestor that context is the composition root itself, so an opaque background there hides it entirely: in the DOM, laid out, and absent from the picture. A transparent root leaves it visible. Siblings at `z-index: 0` or above are unaffected.",
+        "selector": ".hl-bar",
+        "dataAttributes": {},
+        "sourceFile": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/compositions/hook.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Give the element's parent a stacking context - `isolation: isolate` is the cheapest, and `transform`, `filter`, `opacity` below 1, `contain: paint` and `will-change` all work too. The negative-z child then paints above that parent's background and renders normally. Or express paint order through DOM order - an earlier sibling paints behind a later one - and raise the elements that should sit in front rather than lowering this one."
+      },
+      {
+        "code": "gsap_timeline_set_initial_hide",
+        "severity": "warning",
+        "message": "Initial hidden state for \"#pl-lock, #pl-sun, #pl-notif\" is set via tl.set(...) at position 0 inside the paused timeline. A zero-duration set at 0 does not render while the playhead sits exactly at 0, so frame 0 shows the un-hidden state.",
+        "selector": "#pl-lock, #pl-sun, #pl-notif",
+        "dataAttributes": {},
+        "sourceFile": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/compositions/plan.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use gsap.set(...) (immediate, outside the timeline) for initial states, or author the hidden state directly in CSS/attributes."
+      }
+    ],
+    "filesScanned": 7
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": false,
+    "errorCount": 15,
+    "warningCount": 0,
+    "infoCount": 56,
+    "findings": [
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 15.251,
+        "selector": "#mt-p-lisbon",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 900.5,
+          "top": 724.5,
+          "right": 998,
+          "bottom": 761.5,
+          "width": 97.5,
+          "height": 37
+        },
+        "containerSelector": "#mt-s-lisbon",
+        "text": "✈ only",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 900.5,
+          "y": 724.5,
+          "width": 97.5,
+          "height": 37
+        },
+        "firstSeen": 15.251,
+        "lastSeen": 18.268,
+        "occurrences": 19,
+        "heldMs": 3017.0000000000014,
+        "times": [
+          15.251,
+          15.419,
+          15.587,
+          15.754,
+          15.922,
+          16.089,
+          16.257,
+          16.425,
+          16.592,
+          16.76,
+          16.927,
+          17.095,
+          17.263,
+          17.43,
+          17.598,
+          17.765,
+          17.933,
+          18.101,
+          18.268
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 15.251,
+        "selector": "#mt-p-porto",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 900.5,
+          "top": 848.5,
+          "right": 998,
+          "bottom": 885.5,
+          "width": 97.5,
+          "height": 37
+        },
+        "containerSelector": "#mt-s-porto",
+        "text": "✈ only",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 900.5,
+          "y": 848.5,
+          "width": 97.5,
+          "height": 37
+        },
+        "firstSeen": 15.251,
+        "lastSeen": 18.268,
+        "occurrences": 19,
+        "heldMs": 3017.0000000000014,
+        "times": [
+          15.251,
+          15.419,
+          15.587,
+          15.754,
+          15.922,
+          16.089,
+          16.257,
+          16.425,
+          16.592,
+          16.76,
+          16.927,
+          17.095,
+          17.263,
+          17.43,
+          17.598,
+          17.765,
+          17.933,
+          18.101,
+          18.268
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 15.419,
+        "selector": "#mt-p-rome",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 900.5,
+          "top": 972.5,
+          "right": 998,
+          "bottom": 1009.5,
+          "width": 97.5,
+          "height": 37
+        },
+        "containerSelector": "#mt-s-rome",
+        "text": "✈ only",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 900.5,
+          "y": 972.5,
+          "width": 97.5,
+          "height": 37
+        },
+        "firstSeen": 15.419,
+        "lastSeen": 18.268,
+        "occurrences": 18,
+        "heldMs": 2849,
+        "times": [
+          15.419,
+          15.587,
+          15.754,
+          15.922,
+          16.089,
+          16.257,
+          16.425,
+          16.592,
+          16.76,
+          16.927,
+          17.095,
+          17.263,
+          17.43,
+          17.598,
+          17.765,
+          17.933,
+          18.101,
+          18.268
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 15.419,
+        "selector": "#mt-p-prague",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 900.5,
+          "top": 1096.5,
+          "right": 998,
+          "bottom": 1133.5,
+          "width": 97.5,
+          "height": 37
+        },
+        "containerSelector": "#mt-s-prague",
+        "text": "✈ only",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 900.5,
+          "y": 1096.5,
+          "width": 97.5,
+          "height": 37
+        },
+        "firstSeen": 15.419,
+        "lastSeen": 18.268,
+        "occurrences": 18,
+        "heldMs": 2849,
+        "times": [
+          15.419,
+          15.587,
+          15.754,
+          15.922,
+          16.089,
+          16.257,
+          16.425,
+          16.592,
+          16.76,
+          16.927,
+          17.095,
+          17.263,
+          17.43,
+          17.598,
+          17.765,
+          17.933,
+          18.101,
+          18.268
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 16.592,
+        "selector": "#mt-p-bruges",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 374,
+          "top": 840.5,
+          "right": 498,
+          "bottom": 893.5,
+          "width": 124,
+          "height": 53
+        },
+        "containerSelector": "#mt-s-bruges",
+        "text": "~€162",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 374,
+          "y": 840.5,
+          "width": 124,
+          "height": 53
+        },
+        "firstSeen": 16.592,
+        "lastSeen": 18.268,
+        "occurrences": 11,
+        "heldMs": 1676.0000000000018,
+        "times": [
+          16.592,
+          16.76,
+          16.927,
+          17.095,
+          17.263,
+          17.43,
+          17.598,
+          17.765,
+          17.933,
+          18.101,
+          18.268
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 16.76,
+        "selector": "#mt-r-strasbourg > span:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 142,
+          "top": 964.5,
+          "right": 379.39,
+          "bottom": 1017.5,
+          "width": 237.39,
+          "height": 53
+        },
+        "containerSelector": "#mt-s-strasbourg",
+        "text": "Strasbourg",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 142,
+          "y": 964.5,
+          "width": 237.39,
+          "height": 53
+        },
+        "firstSeen": 16.76,
+        "lastSeen": 18.268,
+        "occurrences": 10,
+        "heldMs": 1507.999999999999,
+        "times": [
+          16.76,
+          16.927,
+          17.095,
+          17.263,
+          17.43,
+          17.598,
+          17.765,
+          17.933,
+          18.101,
+          18.268
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 16.76,
+        "selector": "#mt-p-strasbourg",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 393.39,
+          "top": 964.5,
+          "right": 519.91,
+          "bottom": 1017.5,
+          "width": 126.52,
+          "height": 53
+        },
+        "containerSelector": "#mt-s-strasbourg",
+        "text": "~€160",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 393.39,
+          "y": 964.5,
+          "width": 126.52,
+          "height": 53
+        },
+        "firstSeen": 16.76,
+        "lastSeen": 18.268,
+        "occurrences": 10,
+        "heldMs": 1507.999999999999,
+        "times": [
+          16.76,
+          16.927,
+          17.095,
+          17.263,
+          17.43,
+          17.598,
+          17.765,
+          17.933,
+          18.101,
+          18.268
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 16.76,
+        "selector": "#mt-p-cologne",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 381.7,
+          "top": 1088.5,
+          "right": 498,
+          "bottom": 1141.5,
+          "width": 116.3,
+          "height": 53
+        },
+        "containerSelector": "#mt-s-cologne",
+        "text": "~€174",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 381.7,
+          "y": 1088.5,
+          "width": 116.3,
+          "height": 53
+        },
+        "firstSeen": 16.76,
+        "lastSeen": 18.268,
+        "occurrences": 10,
+        "heldMs": 1507.999999999999,
+        "times": [
+          16.76,
+          16.927,
+          17.095,
+          17.263,
+          17.43,
+          17.598,
+          17.765,
+          17.933,
+          18.101,
+          18.268
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 16.927,
+        "selector": "#mt-r-amsterdam > span:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 142,
+          "top": 1212.5,
+          "right": 392.19,
+          "bottom": 1265.5,
+          "width": 250.19,
+          "height": 53
+        },
+        "containerSelector": "#mt-s-amsterdam",
+        "text": "Amsterdam",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 142,
+          "y": 1212.5,
+          "width": 250.19,
+          "height": 53
+        },
+        "firstSeen": 16.927,
+        "lastSeen": 18.268,
+        "occurrences": 9,
+        "heldMs": 1341.0000000000011,
+        "times": [
+          16.927,
+          17.095,
+          17.263,
+          17.43,
+          17.598,
+          17.765,
+          17.933,
+          18.101,
+          18.268
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 16.927,
+        "selector": "#mt-p-amsterdam",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 406.19,
+          "top": 1212.5,
+          "right": 541.77,
+          "bottom": 1265.5,
+          "width": 135.58,
+          "height": 53
+        },
+        "containerSelector": "#mt-s-amsterdam",
+        "text": "~€220",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 406.19,
+          "y": 1212.5,
+          "width": 135.58,
+          "height": 53
+        },
+        "firstSeen": 16.927,
+        "lastSeen": 18.268,
+        "occurrences": 9,
+        "heldMs": 1341.0000000000011,
+        "times": [
+          16.927,
+          17.095,
+          17.263,
+          17.43,
+          17.598,
+          17.765,
+          17.933,
+          18.101,
+          18.268
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 16.927,
+        "selector": "#mt-p-london",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 860.36,
+          "top": 468.5,
+          "right": 998,
+          "bottom": 521.5,
+          "width": 137.64,
+          "height": 53
+        },
+        "containerSelector": "#mt-s-london",
+        "text": "~€260",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 860.36,
+          "y": 468.5,
+          "width": 137.64,
+          "height": 53
+        },
+        "firstSeen": 16.927,
+        "lastSeen": 18.268,
+        "occurrences": 9,
+        "heldMs": 1341.0000000000011,
+        "times": [
+          16.927,
+          17.095,
+          17.263,
+          17.43,
+          17.598,
+          17.765,
+          17.933,
+          18.101,
+          18.268
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 17.095,
+        "selector": "#mt-r-barcelona > span:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 642,
+          "top": 592.5,
+          "right": 855.14,
+          "bottom": 645.5,
+          "width": 213.14,
+          "height": 53
+        },
+        "containerSelector": "#mt-s-barcelona",
+        "text": "Barcelona",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 642,
+          "y": 592.5,
+          "width": 213.14,
+          "height": 53
+        },
+        "firstSeen": 17.095,
+        "lastSeen": 18.268,
+        "occurrences": 8,
+        "heldMs": 1173.0000000000018,
+        "times": [
+          17.095,
+          17.263,
+          17.43,
+          17.598,
+          17.765,
+          17.933,
+          18.101,
+          18.268
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 17.095,
+        "selector": "#mt-p-barcelona",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 871.67,
+          "top": 592.5,
+          "right": 998,
+          "bottom": 645.5,
+          "width": 126.33,
+          "height": 53
+        },
+        "containerSelector": "#mt-s-barcelona",
+        "text": "~€190",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 871.67,
+          "y": 592.5,
+          "width": 126.33,
+          "height": 53
+        },
+        "firstSeen": 17.095,
+        "lastSeen": 18.268,
+        "occurrences": 8,
+        "heldMs": 1173.0000000000018,
+        "times": [
+          17.095,
+          17.263,
+          17.43,
+          17.598,
+          17.765,
+          17.933,
+          18.101,
+          18.268
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 17.095,
+        "selector": "#mt-p-berlin",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 875.06,
+          "top": 1212.5,
+          "right": 998,
+          "bottom": 1265.5,
+          "width": 122.94,
+          "height": 53
+        },
+        "containerSelector": "#mt-s-berlin",
+        "text": "~€214",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 875.06,
+          "y": 1212.5,
+          "width": 122.94,
+          "height": 53
+        },
+        "firstSeen": 17.095,
+        "lastSeen": 18.268,
+        "occurrences": 8,
+        "heldMs": 1173.0000000000018,
+        "times": [
+          17.095,
+          17.263,
+          17.43,
+          17.598,
+          17.765,
+          17.933,
+          18.101,
+          18.268
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 21.667,
+        "selector": "#pl-sun-day > div:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 125,
+          "top": 1111.19,
+          "right": 875.95,
+          "bottom": 1169.19,
+          "width": 750.95,
+          "height": 58
+        },
+        "containerSelector": "#pl-back-foot > b:nth-of-type(1)",
+        "text": "Flea market at Place du Jeu de Balle.",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/plan.html",
+        "bbox": {
+          "x": 125,
+          "y": 1111.19,
+          "width": 750.95,
+          "height": 58
+        },
+        "firstSeen": 21.453,
+        "lastSeen": 23.128,
+        "occurrences": 12,
+        "heldMs": 1675.0000000000007,
+        "times": [
+          21.453,
+          21.62,
+          21.667,
+          21.788,
+          21.955,
+          22.123,
+          22.291,
+          22.458,
+          22.626,
+          22.793,
+          22.961,
+          23.128
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 1.667,
+        "selector": "#hook-sun",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 90,
+          "top": 1180,
+          "right": 990,
+          "bottom": 2080,
+          "width": 900,
+          "height": 900
+        },
+        "containerSelector": "#hook > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "bottom": 160
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/hook.html",
+        "bbox": {
+          "x": 90,
+          "y": 1180,
+          "width": 900,
+          "height": 900
+        },
+        "firstSeen": 1.667,
+        "lastSeen": 1.667,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          1.667
+        ]
+      },
+      {
+        "code": "clipped_text",
+        "severity": "info",
+        "time": 5,
+        "selector": "#tab1",
+        "message": "Text content is clipped by its own box.",
+        "rect": {
+          "left": 99,
+          "top": 513,
+          "right": 178.05,
+          "bottom": 591,
+          "width": 79.05,
+          "height": 78
+        },
+        "text": "Trains Paris →",
+        "fixHint": "Text is 79px x 78px inside 79px x 78px and overflows by up to 168px; widen the text box to at least ~247px, or allow wrapping with max-width/fitTextFontSize.",
+        "overflow": {
+          "right": 168
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/tabs.html",
+        "bbox": {
+          "x": 99,
+          "y": 513,
+          "width": 79.05,
+          "height": 78
+        },
+        "firstSeen": 5,
+        "lastSeen": 5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          5
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 5,
+        "selector": "#tab1",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 120,
+          "top": 532,
+          "right": 324.61,
+          "bottom": 571,
+          "width": 204.61,
+          "height": 39
+        },
+        "containerSelector": "#tab2",
+        "text": "Trains Paris →",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.67,
+        "dataAttributes": {},
+        "sourceFile": "compositions/tabs.html",
+        "bbox": {
+          "x": 120,
+          "y": 532,
+          "width": 204.61,
+          "height": 39
+        },
+        "firstSeen": 5,
+        "lastSeen": 5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          5
+        ]
+      },
+      {
+        "code": "clipped_text",
+        "severity": "info",
+        "time": 5,
+        "selector": "#tab2",
+        "message": "Text content is clipped by its own box.",
+        "rect": {
+          "left": 184.05,
+          "top": 513,
+          "right": 263.11,
+          "bottom": 591,
+          "width": 79.06,
+          "height": 78
+        },
+        "text": "Cheap flights",
+        "fixHint": "Text is 79px x 78px inside 79px x 78px and overflows by up to 159px; widen the text box to at least ~238px, or allow wrapping with max-width/fitTextFontSize.",
+        "overflow": {
+          "right": 159
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/tabs.html",
+        "bbox": {
+          "x": 184.05,
+          "y": 513,
+          "width": 79.06,
+          "height": 78
+        },
+        "firstSeen": 5,
+        "lastSeen": 5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          5
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 5,
+        "selector": "#tab2",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 205.05,
+          "top": 532,
+          "right": 400.8,
+          "bottom": 571,
+          "width": 195.75,
+          "height": 39
+        },
+        "containerSelector": "#tab3",
+        "text": "Cheap flights",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.67,
+        "dataAttributes": {},
+        "sourceFile": "compositions/tabs.html",
+        "bbox": {
+          "x": 205.05,
+          "y": 532,
+          "width": 195.75,
+          "height": 39
+        },
+        "firstSeen": 5,
+        "lastSeen": 5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          5
+        ]
+      },
+      {
+        "code": "clipped_text",
+        "severity": "info",
+        "time": 5,
+        "selector": "#tab3",
+        "message": "Text content is clipped by its own box.",
+        "rect": {
+          "left": 269.11,
+          "top": 513,
+          "right": 348.16,
+          "bottom": 591,
+          "width": 79.05,
+          "height": 78
+        },
+        "text": "Hostels Lisbon",
+        "fixHint": "Text is 79px x 78px inside 79px x 78px and overflows by up to 177px; widen the text box to at least ~256px, or allow wrapping with max-width/fitTextFontSize.",
+        "overflow": {
+          "right": 177
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/tabs.html",
+        "bbox": {
+          "x": 269.11,
+          "y": 513,
+          "width": 79.05,
+          "height": 78
+        },
+        "firstSeen": 5,
+        "lastSeen": 5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          5
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 5,
+        "selector": "#tab3",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 290.11,
+          "top": 532,
+          "right": 504.41,
+          "bottom": 571,
+          "width": 214.3,
+          "height": 39
+        },
+        "containerSelector": "#tab4",
+        "text": "Hostels Lisbon",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.67,
+        "dataAttributes": {},
+        "sourceFile": "compositions/tabs.html",
+        "bbox": {
+          "x": 290.11,
+          "y": 532,
+          "width": 214.3,
+          "height": 39
+        },
+        "firstSeen": 5,
+        "lastSeen": 5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          5
+        ]
+      },
+      {
+        "code": "clipped_text",
+        "severity": "info",
+        "time": 5,
+        "selector": "#tab4",
+        "message": "Text content is clipped by its own box.",
+        "rect": {
+          "left": 354.16,
+          "top": 513,
+          "right": 433.2,
+          "bottom": 591,
+          "width": 79.05,
+          "height": 78
+        },
+        "text": "Is Ghent nice?",
+        "fixHint": "Text is 79px x 78px inside 79px x 78px and overflows by up to 171px; widen the text box to at least ~250px, or allow wrapping with max-width/fitTextFontSize.",
+        "overflow": {
+          "right": 171
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/tabs.html",
+        "bbox": {
+          "x": 354.16,
+          "y": 513,
+          "width": 79.05,
+          "height": 78
+        },
+        "firstSeen": 5,
+        "lastSeen": 5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          5
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 5,
+        "selector": "#tab4",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 375.16,
+          "top": 532,
+          "right": 583.36,
+          "bottom": 571,
+          "width": 208.2,
+          "height": 39
+        },
+        "containerSelector": "#tab5",
+        "text": "Is Ghent nice?",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.67,
+        "dataAttributes": {},
+        "sourceFile": "compositions/tabs.html",
+        "bbox": {
+          "x": 375.16,
+          "y": 532,
+          "width": 208.2,
+          "height": 39
+        },
+        "firstSeen": 5,
+        "lastSeen": 5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          5
+        ]
+      },
+      {
+        "code": "clipped_text",
+        "severity": "info",
+        "time": 5,
+        "selector": "#tab5",
+        "message": "Text content is clipped by its own box.",
+        "rect": {
+          "left": 439.2,
+          "top": 513,
+          "right": 518.25,
+          "bottom": 591,
+          "width": 79.05,
+          "height": 78
+        },
+        "text": "Hostels Brussels",
+        "fixHint": "Text is 79px x 78px inside 79px x 78px and overflows by up to 204px; widen the text box to at least ~283px, or allow wrapping with max-width/fitTextFontSize.",
+        "overflow": {
+          "right": 204
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/tabs.html",
+        "bbox": {
+          "x": 439.2,
+          "y": 513,
+          "width": 79.05,
+          "height": 78
+        },
+        "firstSeen": 5,
+        "lastSeen": 5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          5
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 5,
+        "selector": "#tab5",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 460.2,
+          "top": 532,
+          "right": 700.95,
+          "bottom": 571,
+          "width": 240.75,
+          "height": 39
+        },
+        "containerSelector": "#tab6",
+        "text": "Hostels Brussels",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.67,
+        "dataAttributes": {},
+        "sourceFile": "compositions/tabs.html",
+        "bbox": {
+          "x": 460.2,
+          "y": 532,
+          "width": 240.75,
+          "height": 39
+        },
+        "firstSeen": 5,
+        "lastSeen": 5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          5
+        ]
+      },
+      {
+        "code": "clipped_text",
+        "severity": "info",
+        "time": 5,
+        "selector": "#tab6",
+        "message": "Text content is clipped by its own box.",
+        "rect": {
+          "left": 524.25,
+          "top": 513,
+          "right": 603.3,
+          "bottom": 591,
+          "width": 79.05,
+          "height": 78
+        },
+        "text": "Food prices",
+        "fixHint": "Text is 79px x 78px inside 79px x 78px and overflows by up to 135px; widen the text box to at least ~214px, or allow wrapping with max-width/fitTextFontSize.",
+        "overflow": {
+          "right": 135
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/tabs.html",
+        "bbox": {
+          "x": 524.25,
+          "y": 513,
+          "width": 79.05,
+          "height": 78
+        },
+        "firstSeen": 5,
+        "lastSeen": 5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          5
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 5,
+        "selector": "#tab6",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 545.25,
+          "top": 532,
+          "right": 716.83,
+          "bottom": 571,
+          "width": 171.58,
+          "height": 39
+        },
+        "containerSelector": "#tab7",
+        "text": "Food prices",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.56,
+        "dataAttributes": {},
+        "sourceFile": "compositions/tabs.html",
+        "bbox": {
+          "x": 545.25,
+          "y": 532,
+          "width": 171.58,
+          "height": 39
+        },
+        "firstSeen": 5,
+        "lastSeen": 5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          5
+        ]
+      },
+      {
+        "code": "clipped_text",
+        "severity": "info",
+        "time": 5,
+        "selector": "#tab7",
+        "message": "Text content is clipped by its own box.",
+        "rect": {
+          "left": 609.3,
+          "top": 513,
+          "right": 688.34,
+          "bottom": 591,
+          "width": 79.05,
+          "height": 78
+        },
+        "text": "Trains (2)",
+        "fixHint": "Text is 79px x 78px inside 79px x 78px and overflows by up to 101px; widen the text box to at least ~180px, or allow wrapping with max-width/fitTextFontSize.",
+        "overflow": {
+          "right": 101
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/tabs.html",
+        "bbox": {
+          "x": 609.3,
+          "y": 513,
+          "width": 79.05,
+          "height": 78
+        },
+        "firstSeen": 5,
+        "lastSeen": 5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          5
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 5,
+        "selector": "#tab7",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 630.3,
+          "top": 532,
+          "right": 768,
+          "bottom": 571,
+          "width": 137.7,
+          "height": 39
+        },
+        "containerSelector": "#tab8",
+        "text": "Trains (2)",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.56,
+        "dataAttributes": {},
+        "sourceFile": "compositions/tabs.html",
+        "bbox": {
+          "x": 630.3,
+          "y": 532,
+          "width": 137.7,
+          "height": 39
+        },
+        "firstSeen": 5,
+        "lastSeen": 5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          5
+        ]
+      },
+      {
+        "code": "clipped_text",
+        "severity": "info",
+        "time": 5,
+        "selector": "#tab8",
+        "message": "Text content is clipped by its own box.",
+        "rect": {
+          "left": 694.34,
+          "top": 513,
+          "right": 773.39,
+          "bottom": 591,
+          "width": 79.05,
+          "height": 78
+        },
+        "text": "Prague in March",
+        "fixHint": "Text is 79px x 78px inside 79px x 78px and overflows by up to 199px; widen the text box to at least ~278px, or allow wrapping with max-width/fitTextFontSize.",
+        "overflow": {
+          "right": 199
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/tabs.html",
+        "bbox": {
+          "x": 694.34,
+          "y": 513,
+          "width": 79.05,
+          "height": 78
+        },
+        "firstSeen": 5,
+        "lastSeen": 5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          5
+        ]
+      },
+      {
+        "code": "clipped_text",
+        "severity": "info",
+        "time": 5,
+        "selector": "#tab9",
+        "message": "Text content is clipped by its own box.",
+        "rect": {
+          "left": 779.39,
+          "top": 513,
+          "right": 837,
+          "bottom": 591,
+          "width": 57.61,
+          "height": 78
+        },
+        "text": "Flights (3)",
+        "fixHint": "Text is 58px x 78px inside 58px x 78px and overflows by up to 132px; widen the text box to at least ~190px, or allow wrapping with max-width/fitTextFontSize.",
+        "overflow": {
+          "right": 132
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/tabs.html",
+        "bbox": {
+          "x": 779.39,
+          "y": 513,
+          "width": 57.61,
+          "height": 78
+        },
+        "firstSeen": 5,
+        "lastSeen": 5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          5
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 8.333,
+        "selector": "#qz-q1",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 123,
+          "top": 29.29,
+          "right": 942,
+          "bottom": 1801.29,
+          "width": 819,
+          "height": 1772
+        },
+        "containerSelector": "#qz-card",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 151,
+          "top": 330.29,
+          "right": 928,
+          "bottom": 1457.29,
+          "width": 777,
+          "height": 1127
+        },
+        "overflow": {
+          "left": 28,
+          "right": 14,
+          "top": 301,
+          "bottom": 344
+        },
+        "dataAttributes": {
+          "data-hf-render-id": "qz-q1",
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "compositions/quiz.html",
+        "bbox": {
+          "x": 123,
+          "y": 29.29,
+          "width": 819,
+          "height": 1772
+        },
+        "firstSeen": 8.333,
+        "lastSeen": 8.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          8.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 11.667,
+        "selector": "#qz-slot1 > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 82,
+          "top": 209,
+          "right": 261.53,
+          "bottom": 240,
+          "width": 179.53,
+          "height": 31
+        },
+        "containerSelector": "#qz-st1",
+        "text": "Q1 · BUDGET",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/quiz.html",
+        "bbox": {
+          "x": 82,
+          "y": 209,
+          "width": 179.53,
+          "height": 31
+        },
+        "firstSeen": 11.667,
+        "lastSeen": 11.667,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          11.667
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 11.667,
+        "selector": "#qz-slot2 > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 412,
+          "top": 209,
+          "right": 640.48,
+          "bottom": 240,
+          "width": 228.48,
+          "height": 31
+        },
+        "containerSelector": "#qz-st2",
+        "text": "Q2 · TRANSPORT",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/quiz.html",
+        "bbox": {
+          "x": 412,
+          "y": 209,
+          "width": 228.48,
+          "height": 31
+        },
+        "firstSeen": 11.667,
+        "lastSeen": 11.667,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          11.667
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 11.667,
+        "selector": "#qz-q3",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 123,
+          "top": 29,
+          "right": 942,
+          "bottom": 1801,
+          "width": 819,
+          "height": 1772
+        },
+        "containerSelector": "#qz-card",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 151,
+          "top": 330,
+          "right": 928,
+          "bottom": 1457,
+          "width": 777,
+          "height": 1127
+        },
+        "overflow": {
+          "left": 28,
+          "right": 14,
+          "top": 301,
+          "bottom": 344
+        },
+        "dataAttributes": {
+          "data-hf-render-id": "qz-q3",
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "compositions/quiz.html",
+        "bbox": {
+          "x": 123,
+          "y": 29,
+          "width": 819,
+          "height": 1772
+        },
+        "firstSeen": 11.667,
+        "lastSeen": 11.667,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          11.667
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 11.667,
+        "selector": "#qz-slot1 > span:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 82,
+          "top": 209,
+          "right": 261.53,
+          "bottom": 240,
+          "width": 179.53,
+          "height": 31
+        },
+        "containerSelector": "#qz-st1 > span:nth-of-type(1)",
+        "text": "Q1 · BUDGET",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/quiz.html",
+        "bbox": {
+          "x": 82,
+          "y": 209,
+          "width": 179.53,
+          "height": 31
+        },
+        "firstSeen": 11.667,
+        "lastSeen": 11.667,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          11.667
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 11.667,
+        "selector": "#qz-slot2 > span:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 412,
+          "top": 209,
+          "right": 640.48,
+          "bottom": 240,
+          "width": 228.48,
+          "height": 31
+        },
+        "containerSelector": "#qz-st2 > span:nth-of-type(1)",
+        "text": "Q2 · TRANSPORT",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/quiz.html",
+        "bbox": {
+          "x": 412,
+          "y": 209,
+          "width": 228.48,
+          "height": 31
+        },
+        "firstSeen": 11.667,
+        "lastSeen": 11.667,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          11.667
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-r-brussels > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 82,
+          "top": 589,
+          "right": 128,
+          "bottom": 649,
+          "width": 46,
+          "height": 60
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "🍫",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 82,
+          "y": 589,
+          "width": 46,
+          "height": 60
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-r-brussels > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 142,
+          "top": 592.5,
+          "right": 324.34,
+          "bottom": 645.5,
+          "width": 182.34,
+          "height": 53
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "Brussels",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 142,
+          "y": 592.5,
+          "width": 182.34,
+          "height": 53
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-p-brussels",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 374.09,
+          "top": 592.5,
+          "right": 498,
+          "bottom": 645.5,
+          "width": 123.91,
+          "height": 53
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "~€136",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 374.09,
+          "y": 592.5,
+          "width": 123.91,
+          "height": 53
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-r-ghent > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 82,
+          "top": 713,
+          "right": 128,
+          "bottom": 773,
+          "width": 46,
+          "height": 60
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "🏰",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 82,
+          "y": 713,
+          "width": 46,
+          "height": 60
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-r-ghent > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 142,
+          "top": 716.5,
+          "right": 269.95,
+          "bottom": 769.5,
+          "width": 127.95,
+          "height": 53
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "Ghent",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 142,
+          "y": 716.5,
+          "width": 127.95,
+          "height": 53
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-p-ghent",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 373.64,
+          "top": 716.5,
+          "right": 498,
+          "bottom": 769.5,
+          "width": 124.36,
+          "height": 53
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "~€150",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 373.64,
+          "y": 716.5,
+          "width": 124.36,
+          "height": 53
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-r-bruges > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 82,
+          "top": 837,
+          "right": 128,
+          "bottom": 897,
+          "width": 46,
+          "height": 60
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "🚲",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 82,
+          "y": 837,
+          "width": 46,
+          "height": 60
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-r-bruges > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 142,
+          "top": 840.5,
+          "right": 291.13,
+          "bottom": 893.5,
+          "width": 149.13,
+          "height": 53
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "Bruges",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 142,
+          "y": 840.5,
+          "width": 149.13,
+          "height": 53
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-p-bruges",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 374,
+          "top": 840.5,
+          "right": 498,
+          "bottom": 893.5,
+          "width": 124,
+          "height": 53
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "~€162",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 374,
+          "y": 840.5,
+          "width": 124,
+          "height": 53
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-s-bruges",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 303.25,
+          "top": 840.79,
+          "right": 484.55,
+          "bottom": 898.21,
+          "width": 181.3,
+          "height": 57.41
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "OVER €150",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 303.25,
+          "y": 840.79,
+          "width": 181.3,
+          "height": 57.41
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-r-barcelona > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 582,
+          "top": 589,
+          "right": 628,
+          "bottom": 649,
+          "width": 46,
+          "height": 60
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "🏖️",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 582,
+          "y": 589,
+          "width": 46,
+          "height": 60
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-r-barcelona > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 642,
+          "top": 592.5,
+          "right": 855.14,
+          "bottom": 645.5,
+          "width": 213.14,
+          "height": 53
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "Barcelona",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.56,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 642,
+          "y": 592.5,
+          "width": 213.14,
+          "height": 53
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-r-lisbon > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 582,
+          "top": 713,
+          "right": 628,
+          "bottom": 773,
+          "width": 46,
+          "height": 60
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "🚋",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 582,
+          "y": 713,
+          "width": 46,
+          "height": 60
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-r-lisbon > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 642,
+          "top": 716.5,
+          "right": 779.69,
+          "bottom": 769.5,
+          "width": 137.69,
+          "height": 53
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "Lisbon",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.89,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 642,
+          "y": 716.5,
+          "width": 137.69,
+          "height": 53
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-r-porto > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 582,
+          "top": 837,
+          "right": 628,
+          "bottom": 897,
+          "width": 46,
+          "height": 60
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "🍷",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 582,
+          "y": 837,
+          "width": 46,
+          "height": 60
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-r-porto > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 642,
+          "top": 840.5,
+          "right": 758.25,
+          "bottom": 893.5,
+          "width": 116.25,
+          "height": 53
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "Porto",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 642,
+          "y": 840.5,
+          "width": 116.25,
+          "height": 53
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-t-lille",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 89,
+          "top": 526,
+          "right": 247.41,
+          "bottom": 557,
+          "width": 158.41,
+          "height": 31
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "culture 3/5",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 89,
+          "y": 526,
+          "width": 158.41,
+          "height": 31
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-t-brussels",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 89,
+          "top": 650,
+          "right": 247.41,
+          "bottom": 681,
+          "width": 158.41,
+          "height": 31
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "culture 4/5",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 89,
+          "y": 650,
+          "width": 158.41,
+          "height": 31
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-t-ghent",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 89,
+          "top": 774,
+          "right": 247.41,
+          "bottom": 805,
+          "width": 158.41,
+          "height": 31
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "culture 4/5",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 89,
+          "y": 774,
+          "width": 158.41,
+          "height": 31
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-match",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 310.16,
+          "top": 554.04,
+          "right": 502.24,
+          "bottom": 600.96,
+          "width": 192.08,
+          "height": 46.91
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "BEST MATCH",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 310.16,
+          "y": 554.04,
+          "width": 192.08,
+          "height": 46.91
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-tk-route",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 103.75,
+          "top": 541.57,
+          "right": 573.16,
+          "bottom": 563.9,
+          "width": 469.41,
+          "height": 22.33
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "PARIS → BRUSSELS · 🚆 TRAIN 1h20",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 103.75,
+          "y": 541.57,
+          "width": 469.41,
+          "height": 22.33
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-tk-city",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 103.75,
+          "top": 562.75,
+          "right": 616.28,
+          "bottom": 653.78,
+          "width": 512.53,
+          "height": 91.03
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "Brussels 🍫",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 103.75,
+          "y": 562.75,
+          "width": 512.53,
+          "height": 91.03
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-tk-total > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 103.75,
+          "top": 914.27,
+          "right": 252.25,
+          "bottom": 936.59,
+          "width": 148.5,
+          "height": 22.33
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "EST. TOTAL",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 103.75,
+          "y": 914.27,
+          "width": 148.5,
+          "height": 22.33
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-tk-total > b:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 538.5,
+          "top": 828.25,
+          "right": 707.68,
+          "bottom": 957.06,
+          "width": 169.17,
+          "height": 128.81
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "~€",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 538.5,
+          "y": 828.25,
+          "width": 169.17,
+          "height": 128.81
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-sum",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 707.68,
+          "top": 906.25,
+          "right": 726.25,
+          "bottom": 934.16,
+          "width": 18.57,
+          "height": 27.91
+        },
+        "containerSelector": "#mt-tk-fill",
+        "text": "0",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 707.68,
+          "y": 906.25,
+          "width": 18.57,
+          "height": 27.91
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-r-brussels > span:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 82,
+          "top": 589,
+          "right": 128,
+          "bottom": 649,
+          "width": 46,
+          "height": 60
+        },
+        "containerSelector": "#mt-tk-city",
+        "text": "🍫",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 82,
+          "y": 589,
+          "width": 46,
+          "height": 60
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-r-brussels > span:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 142,
+          "top": 592.5,
+          "right": 324.34,
+          "bottom": 645.5,
+          "width": 182.34,
+          "height": 53
+        },
+        "containerSelector": "#mt-tk-city",
+        "text": "Brussels",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 142,
+          "y": 592.5,
+          "width": 182.34,
+          "height": 53
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-p-brussels",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 374.09,
+          "top": 592.5,
+          "right": 498,
+          "bottom": 645.5,
+          "width": 123.91,
+          "height": 53
+        },
+        "containerSelector": "#mt-tk-city",
+        "text": "~€136",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 374.09,
+          "y": 592.5,
+          "width": 123.91,
+          "height": 53
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-t-lille",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 89,
+          "top": 526,
+          "right": 247.41,
+          "bottom": 557,
+          "width": 158.41,
+          "height": 31
+        },
+        "containerSelector": "#mt-tk-route",
+        "text": "culture 3/5",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 89,
+          "y": 526,
+          "width": 158.41,
+          "height": 31
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#mt-match",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 310.16,
+          "top": 554.04,
+          "right": 502.24,
+          "bottom": 600.96,
+          "width": 192.08,
+          "height": 46.92
+        },
+        "containerSelector": "#mt-tk-city",
+        "text": "BEST MATCH",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 310.16,
+          "y": 554.04,
+          "width": 192.08,
+          "height": 46.92
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 20.112,
+        "selector": "#pl-front > div:nth-of-type(1) > div:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 203.2,
+          "top": 498.24,
+          "right": 733.39,
+          "bottom": 574.73,
+          "width": 530.19,
+          "height": 76.49
+        },
+        "containerSelector": "#pl-front-city",
+        "text": "PARIS → BRUSSELS · 🚆 TRAIN 1h20",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/plan.html",
+        "bbox": {
+          "x": 203.2,
+          "y": 498.24,
+          "width": 530.19,
+          "height": 76.49
+        },
+        "firstSeen": 20.112,
+        "lastSeen": 20.112,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          20.112
+        ]
+      },
+      {
+        "code": "text_box_overflow",
+        "severity": "info",
+        "time": 28.333,
+        "selector": "#ec-w6",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 693.3,
+          "top": 553.63,
+          "right": 1132.77,
+          "bottom": 665.85,
+          "width": 439.47,
+          "height": 112.22
+        },
+        "containerSelector": "#endcard > div:nth-of-type(1)",
+        "text": "budget.",
+        "fixHint": "Text is 439px x 112px inside 1080px x 1920px and overflows by up to 53px; widen the container to at least ~1133px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 52.77
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/endcard.html",
+        "bbox": {
+          "x": 693.3,
+          "y": 553.63,
+          "width": 439.47,
+          "height": 112.22
+        },
+        "firstSeen": 28.333,
+        "lastSeen": 28.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          28.333
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 28.333,
+        "selector": "#ec-w6",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 693.3,
+          "top": 527.91,
+          "right": 1132.77,
+          "bottom": 675.91,
+          "width": 439.47,
+          "height": 148
+        },
+        "containerSelector": "#root",
+        "text": "budget.",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 52.77
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/endcard.html",
+        "bbox": {
+          "x": 693.3,
+          "y": 527.91,
+          "width": 439.47,
+          "height": 148
+        },
+        "firstSeen": 28.333,
+        "lastSeen": 28.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          28.333
+        ]
+      }
+    ],
+    "duration": 30,
+    "samples": [
+      1.667,
+      5,
+      8.333,
+      11.667,
+      15,
+      18.333,
+      21.667,
+      25,
+      28.333
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 71,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      1.667,
+      8.333,
+      15,
+      21.667,
+      28.333
+    ],
+    "checked": 61,
+    "passed": 61
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 25,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Find my weekend\" (3 words) is on screen 0.84 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Find my weekend",
+        "selector": "#tabs-btn-label",
+        "dataAttributes": {},
+        "sourceFile": "compositions/tabs.html",
+        "bbox": {
+          "x": 304.31,
+          "y": 901.25,
+          "width": 471.38000000000005,
+          "height": 67.5
+        },
+        "time": 6.438,
+        "words": 3,
+        "seconds": 0.836,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"Q1 · BUDGET\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "Q1 · BUDGET",
+        "selector": "#qz-slot1 > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/quiz.html",
+        "bbox": {
+          "x": 82,
+          "y": 209,
+          "width": 179.53,
+          "height": 31
+        },
+        "time": 8.125,
+        "times": [
+          8.125,
+          8.125,
+          8.125
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 5.5,
+        "elements": [
+          {
+            "selector": "#qz-slot1 > span:nth-of-type(1)",
+            "text": "Q1 · BUDGET",
+            "fontPx": 24,
+            "time": 8.125,
+            "seconds": 5.5
+          },
+          {
+            "selector": "#qz-slot2 > span:nth-of-type(1)",
+            "text": "Q2 · TRANSPORT",
+            "fontPx": 24,
+            "time": 8.125,
+            "seconds": 5.5
+          },
+          {
+            "selector": "#qz-slot3 > span:nth-of-type(1)",
+            "text": "Q3 · VIBE",
+            "fontPx": 24,
+            "time": 8.125,
+            "seconds": 5.5
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"PARIS → BRUSSELS · 🚆 TRAIN 1h20\" (4 words) is on screen 0.01 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "PARIS → BRUSSELS · 🚆 TRAIN 1h20",
+        "selector": "#mt-tk-route",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 125,
+          "y": 513,
+          "width": 625.88,
+          "height": 39
+        },
+        "time": 13.625,
+        "words": 4,
+        "seconds": 0.008,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Brussels 🍫\" (1 word) is on screen 0.01 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (0.80 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Brussels 🍫",
+        "selector": "#mt-tk-city",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 125,
+          "y": 550,
+          "width": 683.38,
+          "height": 159
+        },
+        "time": 13.625,
+        "words": 1,
+        "seconds": 0.008,
+        "floorSeconds": 0.4
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"EST. TOTAL\" (2 words) is on screen 0.01 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (1.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "EST. TOTAL",
+        "selector": "#mt-tk-total > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 125,
+          "y": 1164,
+          "width": 198,
+          "height": 39
+        },
+        "time": 13.625,
+        "words": 2,
+        "seconds": 0.008,
+        "floorSeconds": 0.4
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"~€ 0\" (1 word) is on screen 0.01 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (0.80 s here) before it leaves or changes; see references/motion.md.",
+        "text": "~€ 0",
+        "selector": "#mt-tk-total > b:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 704.67,
+          "y": 1013.75,
+          "width": 250.33000000000004,
+          "height": 216.25
+        },
+        "time": 13.625,
+        "words": 1,
+        "seconds": 0.008,
+        "floorSeconds": 0.4
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 6 text elements stay under it for 0.5 s or more, the smallest \"Q1 · BUDGET\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "Q1 · BUDGET",
+        "selector": "#mt-st1 > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 77,
+          "y": 204,
+          "width": 179.53,
+          "height": 31
+        },
+        "time": 13.625,
+        "times": [
+          13.625,
+          13.625,
+          13.625,
+          17.375,
+          17.375,
+          17.5
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 6.25,
+        "elements": [
+          {
+            "selector": "#mt-st1 > span:nth-of-type(1)",
+            "text": "Q1 · BUDGET",
+            "fontPx": 24,
+            "time": 13.625,
+            "seconds": 6.25
+          },
+          {
+            "selector": "#mt-st2 > span:nth-of-type(1)",
+            "text": "Q2 · TRANSPORT",
+            "fontPx": 24,
+            "time": 13.625,
+            "seconds": 6.25
+          },
+          {
+            "selector": "#mt-st3 > span:nth-of-type(1)",
+            "text": "Q3 · VIBE",
+            "fontPx": 24,
+            "time": 13.625,
+            "seconds": 6.25
+          },
+          {
+            "selector": "#mt-t-lille",
+            "text": "culture 3/5",
+            "fontPx": 24,
+            "time": 17.375,
+            "seconds": 1
+          },
+          {
+            "selector": "#mt-t-brussels",
+            "text": "culture 4/5",
+            "fontPx": 24,
+            "time": 17.375,
+            "seconds": 1
+          },
+          {
+            "selector": "#mt-t-ghent",
+            "text": "culture 4/5",
+            "fontPx": 24,
+            "time": 17.5,
+            "seconds": 0.875
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"✈ only\" (1 word) is on screen 0.30 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (0.80 s here) before it leaves or changes; see references/motion.md.",
+        "text": "✈ only",
+        "selector": "#mt-p-lisbon",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 900.5,
+          "y": 724.5,
+          "width": 97.5,
+          "height": 37
+        },
+        "time": 15.102,
+        "words": 1,
+        "seconds": 0.305,
+        "floorSeconds": 0.4
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"NO TRAIN\" (2 words) is on screen 0.27 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (1.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "NO TRAIN",
+        "selector": "#mt-s-lisbon",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 829.52,
+          "y": 720.99,
+          "width": 148.54999999999995,
+          "height": 49.01999999999998
+        },
+        "time": 15.141,
+        "words": 2,
+        "seconds": 0.266,
+        "floorSeconds": 0.4
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"NO TRAIN\" (2 words) is on screen 0.27 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (1.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "NO TRAIN",
+        "selector": "#mt-s-porto",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 802.98,
+          "y": 831.16,
+          "width": 201.63,
+          "height": 76.67999999999995
+        },
+        "time": 15.234,
+        "words": 2,
+        "seconds": 0.266,
+        "floorSeconds": 0.4
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"NO TRAIN\" (2 words) is on screen 0.27 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (1.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "NO TRAIN",
+        "selector": "#mt-s-rome",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 824.54,
+          "y": 966.59,
+          "width": 158.51999999999998,
+          "height": 53.82000000000005
+        },
+        "time": 15.336,
+        "words": 2,
+        "seconds": 0.266,
+        "floorSeconds": 0.4
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"NO TRAIN\" (2 words) is on screen 0.27 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (1.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "NO TRAIN",
+        "selector": "#mt-s-prague",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 829.58,
+          "y": 1093.02,
+          "width": 148.42999999999995,
+          "height": 48.960000000000036
+        },
+        "time": 15.406,
+        "words": 2,
+        "seconds": 0.266,
+        "floorSeconds": 0.4
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"OVER €150\" (2 words) is on screen 0.27 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (1.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "OVER €150",
+        "selector": "#mt-s-bruges",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 308.24,
+          "y": 843.12,
+          "width": 171.31,
+          "height": 52.75999999999999
+        },
+        "time": 16.539,
+        "words": 2,
+        "seconds": 0.266,
+        "floorSeconds": 0.4
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"OVER €150\" (2 words) is on screen 0.27 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (1.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "OVER €150",
+        "selector": "#mt-s-strasbourg",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 310.05,
+          "y": 967.94,
+          "width": 167.69,
+          "height": 51.120000000000005
+        },
+        "time": 16.641,
+        "words": 2,
+        "seconds": 0.266,
+        "floorSeconds": 0.4
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"OVER €150\" (2 words) is on screen 0.27 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (1.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "OVER €150",
+        "selector": "#mt-s-cologne",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 288.59,
+          "y": 1081.48,
+          "width": 210.62,
+          "height": 72.03999999999996
+        },
+        "time": 16.734,
+        "words": 2,
+        "seconds": 0.266,
+        "floorSeconds": 0.4
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"OVER €150\" (2 words) is on screen 0.27 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (1.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "OVER €150",
+        "selector": "#mt-s-amsterdam",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 307.58,
+          "y": 1214.82,
+          "width": 172.64,
+          "height": 53.3599999999999
+        },
+        "time": 16.805,
+        "words": 2,
+        "seconds": 0.266,
+        "floorSeconds": 0.4
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"OVER €150\" (2 words) is on screen 0.27 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (1.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "OVER €150",
+        "selector": "#mt-s-london",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 810.27,
+          "y": 472.04,
+          "width": 167.26,
+          "height": 50.920000000000016
+        },
+        "time": 16.906,
+        "words": 2,
+        "seconds": 0.266,
+        "floorSeconds": 0.4
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"OVER €150\" (2 words) is on screen 0.27 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (1.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "OVER €150",
+        "selector": "#mt-s-barcelona",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 786.18,
+          "y": 584.21,
+          "width": 215.42999999999995,
+          "height": 74.58000000000004
+        },
+        "time": 17,
+        "words": 2,
+        "seconds": 0.273,
+        "floorSeconds": 0.4
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"OVER €150\" (2 words) is on screen 0.23 s (±0.01 s), under its 0.40 s floor: hold it about 0.5 s + 0.3 s a word (1.10 s here) before it leaves or changes; see references/motion.md.",
+        "text": "OVER €150",
+        "selector": "#mt-s-berlin",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 792.93,
+          "y": 1207.72,
+          "width": 201.93999999999994,
+          "height": 67.55999999999995
+        },
+        "time": 17.102,
+        "words": 2,
+        "seconds": 0.234,
+        "floorSeconds": 0.4
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"culture 3/5\" (3 words) is on screen 1.00 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "culture 3/5",
+        "selector": "#mt-t-lille",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 89,
+          "y": 525.9,
+          "width": 158.41,
+          "height": 31
+        },
+        "time": 17.305,
+        "words": 3,
+        "seconds": 1,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"culture 4/5\" (3 words) is on screen 0.94 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "culture 4/5",
+        "selector": "#mt-t-brussels",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 89,
+          "y": 647.16,
+          "width": 158.41,
+          "height": 31
+        },
+        "time": 17.367,
+        "words": 3,
+        "seconds": 0.938,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"culture 4/5\" (3 words) is on screen 0.87 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "culture 4/5",
+        "selector": "#mt-t-ghent",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 89,
+          "y": 773.63,
+          "width": 158.41,
+          "height": 31
+        },
+        "time": 17.438,
+        "words": 3,
+        "seconds": 0.867,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Estimates from our destination data, not live prices.\" (8 words) is on screen 0.40 s (±0.01 s), under its 2.17 s floor: hold it about 0.5 s + 0.3 s a word (2.90 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Estimates from our destination data, not live prices.",
+        "selector": "#mt-note",
+        "dataAttributes": {},
+        "sourceFile": "compositions/match.html",
+        "bbox": {
+          "x": 70,
+          "y": 1262,
+          "width": 890.41,
+          "height": 37
+        },
+        "time": 19.406,
+        "words": 8,
+        "seconds": 0.398,
+        "floorSeconds": 2.175
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"PARIS → BRUSSELS · 🚆 TRAIN 1h20\" (4 words) is on screen 0.38 s (±0.06 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "PARIS → BRUSSELS · 🚆 TRAIN 1h20",
+        "selector": "#pl-front > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/plan.html",
+        "bbox": {
+          "x": 125,
+          "y": 513,
+          "width": 625.88,
+          "height": 39
+        },
+        "time": 19.875,
+        "words": 4,
+        "seconds": 0.375,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Flea market at Place du Jeu de Balle.\" (8 words) is on screen 2.13 s (±0.06 s), under its 2.17 s floor: hold it about 0.5 s + 0.3 s a word (2.90 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Flea market at Place du Jeu de Balle.",
+        "selector": "#pl-sun-day > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/plan.html",
+        "bbox": {
+          "x": 125,
+          "y": 1111.19,
+          "width": 750.95,
+          "height": 58
+        },
+        "time": 21.125,
+        "words": 8,
+        "seconds": 2.125,
+        "floorSeconds": 2.175
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 240
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "audio_clip_silent",
+        "severity": "warning",
+        "message": "assets/sfx/riser.mp3 is silent for the whole part this clip plays (7.5-10 s of the file).",
+        "selector": "#sx-riser",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 16.7,
+        "timeRange": [
+          16.7,
+          19.2
+        ],
+        "fixHint": "Check the file has sound there, or move data-media-start to where it does."
+      }
+    ]
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

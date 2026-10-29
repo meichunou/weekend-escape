@@ -1,0 +1,83 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: var(--cream); overflow: hidden; }
+    #tabs-title { position: absolute; left: 84px; top: 200px; width: 920px; }
+    .tabs-line { font: 800 104px/1.04 var(--display); letter-spacing: -0.035em; white-space: nowrap; }
+    #tabs-l2 { color: var(--coral-text); font-size: 76px; margin-top: 10px; }
+    #tabs-win { position: absolute; left: 70px; top: 480px; width: 940px; height: 860px; background: var(--paper); border: var(--line); border-radius: 34px; box-shadow: var(--shadow); overflow: hidden; }
+    #tabs-bar { position: absolute; left: 0; right: 0; top: 0; height: 104px; background: #f4ece2; border-bottom: var(--line); }
+    #tabs-strip { position: absolute; left: 22px; right: 22px; top: 26px; height: 78px; display: flex; gap: 6px; }
+    .tab { flex: 1 1 0; min-width: 0; height: 78px; background: var(--paper); border: 5px solid var(--ink); border-bottom: 0; border-radius: 18px 18px 0 0; padding: 14px 16px 0; font: 700 30px var(--body); white-space: nowrap; overflow: hidden; text-overflow: clip; }
+    #tabs-sum { position: absolute; left: 60px; right: 60px; top: 170px; }
+    .sum-row { display: flex; justify-content: space-between; align-items: baseline; font: 700 52px var(--body); padding: 22px 0; border-bottom: 4px dashed rgba(35, 27, 46, 0.35); }
+    .sum-row b { font: 800 64px var(--display); color: var(--ink-soft); }
+    #tabs-total { display: flex; justify-content: space-between; align-items: baseline; margin-top: 30px; font: 800 80px var(--display); }
+    #tabs-total b { color: var(--coral-text); }
+    #tabs-btn { position: absolute; left: 220px; top: 860px; width: 640px; height: 150px; border-radius: 999px; background: var(--coral); border: var(--line); box-shadow: 10px 10px 0 var(--ink); display: flex; align-items: center; justify-content: center; font: 800 58px var(--display); letter-spacing: -0.02em; color: var(--ink); white-space: nowrap; }
+    #tabs-btn-label { display: block; }
+    #tabs-finger { position: absolute; left: 600px; top: 1000px; width: 130px; height: 130px; border-radius: 50%; background: rgba(255, 252, 247, 0.6); border: 8px solid var(--ink); }
+    #tabs-flood { position: absolute; inset: 0; background: var(--coral); }
+  </style>
+  <div data-hf-id="hf-nqtz" id="root" data-composition-id="tabs" data-width="1080" data-height="1920">
+    <div data-hf-id="hf-w8rc" id="tabs-title">
+      <div data-hf-id="hf-v6kt" class="tabs-line" id="tabs-l1">Hours of tabs.</div>
+      <div data-hf-id="hf-jabq" class="tabs-line" id="tabs-l2">Still no idea if it fits.</div>
+    </div>
+    <div data-hf-id="hf-r3wo" id="tabs-win">
+      <div data-hf-id="hf-h2wd" id="tabs-bar">
+        <div data-hf-id="hf-66a8" id="tabs-strip">
+          <div data-hf-id="hf-8tfr" class="tab" id="tab1">Trains Paris →</div>
+          <div data-hf-id="hf-0o0e" class="tab" id="tab2">Cheap flights</div>
+          <div data-hf-id="hf-etrc" class="tab" id="tab3">Hostels Lisbon</div>
+          <div data-hf-id="hf-5wqm" class="tab" id="tab4">Is Ghent nice?</div>
+          <div data-hf-id="hf-e6fk" class="tab" id="tab5">Hostels Brussels</div>
+          <div data-hf-id="hf-j7p0" class="tab" id="tab6">Food prices</div>
+          <div data-hf-id="hf-1dsd" class="tab" id="tab7">Trains (2)</div>
+          <div data-hf-id="hf-9nk0" class="tab" id="tab8">Prague in March</div>
+          <div data-hf-id="hf-tzy0" class="tab" id="tab9">Flights (3)</div>
+          <div data-hf-id="hf-p0m6" class="tab" id="tab10">Budget hostels</div>
+          <div data-hf-id="hf-a2m4" class="tab" id="tab11">Cologne?</div>
+          <div data-hf-id="hf-1gbi" class="tab" id="tab12">Weekend ideas</div>
+        </div>
+      </div>
+      <div data-hf-id="hf-19pf" id="tabs-sum">
+        <div data-hf-id="hf-nc4i" class="sum-row" id="sum1"><span data-hf-id="hf-5cu5">Train</span><b data-hf-id="hf-wjq6" id="sum1-v">€ ?</b></div>
+        <div data-hf-id="hf-je0h" class="sum-row" id="sum2"><span data-hf-id="hf-oy8w">2 nights</span><b data-hf-id="hf-5e8b" id="sum2-v">€ ?</b></div>
+        <div data-hf-id="hf-imco" class="sum-row" id="sum3"><span data-hf-id="hf-yp5x">Food</span><b data-hf-id="hf-mgss" id="sum3-v">€ ?</b></div>
+        <div data-hf-id="hf-ik8w" id="tabs-total"><span data-hf-id="hf-7qep">Total</span><b data-hf-id="hf-k6z4">€ ???</b></div>
+      </div>
+    </div>
+    <div data-hf-id="hf-mage" id="tabs-btn"><span data-hf-id="hf-jf0a" id="tabs-btn-label">Find my weekend</span></div>
+    <div data-hf-id="hf-54tx" id="tabs-finger"></div>
+    <div data-hf-id="hf-3ige" id="tabs-flood"></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // The browser rises in from below as the hook is pushed out.
+    tl.fromTo("#tabs-win", { y: 1300 }, { y: 0, duration: 0.6, ease: "expo.out" }, 0);
+    tl.fromTo("#tabs-l1", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power2.out" }, 0.25);
+    // Tabs open one by one; the flex strip squeezes the earlier ones, like a real browser.
+    const tabs = ["#tab1", "#tab2", "#tab3", "#tab4", "#tab5", "#tab6", "#tab7", "#tab8", "#tab9", "#tab10", "#tab11", "#tab12"];
+    tabs.forEach((id, i) => {
+      const at = 0.35 + i * 0.2 - Math.max(0, i - 5) * 0.06;
+      tl.fromTo(id, { flexGrow: 0, flexBasis: 0, opacity: 0 }, { flexGrow: 1, opacity: 1, duration: 0.18, ease: "power2.out" }, at);
+    });
+    tl.fromTo(["#sum1", "#sum2", "#sum3", "#tabs-total"], { opacity: 0 }, { opacity: 1, duration: 0.15, stagger: 0.12, ease: "none" }, 0.7);
+    tl.fromTo("#tabs-l2", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power2.out" }, 1.2);
+    // The sum never resolves: the window shakes once, then everything is sucked into the button.
+    tl.fromTo("#tabs-win", { x: 0 }, { x: 14, duration: 0.05, ease: "none", repeat: 5, yoyo: true }, 2.3);
+    tl.fromTo("#tabs-btn", { opacity: 0, scale: 0.2 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.7)" }, 2.75);
+    tl.to("#tabs-win", { scale: 0.08, x: 0, y: 445, opacity: 0, duration: 0.42, ease: "power3.in" }, 2.8);
+    tl.to("#tabs-title", { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power2.in" }, 2.85);
+    // Finger taps the real "Find my weekend" button.
+    tl.fromTo("#tabs-finger", { opacity: 0, x: 140, y: 180 }, { opacity: 1, x: 0, y: 0, duration: 0.3, ease: "power3.out" }, 3.6);
+    tl.to("#tabs-finger", { scale: 0.8, duration: 0.06, ease: "power2.in" }, 3.93);
+    tl.to("#tabs-btn", { x: 7, y: 7, duration: 0.06, ease: "power2.in" }, 3.93);
+    tl.to("#tabs-finger", { opacity: 0, duration: 0.1, ease: "none" }, 4.02);
+    // Zoom through the button: its coral becomes the next frame.
+    tl.to("#tabs-btn-label", { opacity: 0, duration: 0.08, ease: "none" }, 4.02);
+    tl.to("#tabs-btn", { scale: 16, duration: 0.36, ease: "power3.in" }, 4.02);
+    tl.fromTo("#tabs-flood", { opacity: 0 }, { opacity: 1, duration: 0.08, ease: "none" }, 4.3);
+    window.__timelines["tabs"] = tl;
+  </script>
+</template>

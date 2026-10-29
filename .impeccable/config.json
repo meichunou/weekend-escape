@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "promo-video/video.html"
+        ],
+        "createdAt": "2026-10-28T10:39:23.022Z",
+        "reason": "User's brief mandates the site's 'sunset ticket' tokens: cream #FFF3E4 / paper #FFFCF7, matching index.html :root"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "promo-video/video.html"
+        ],
+        "createdAt": "2026-10-28T10:39:23.119Z",
+        "reason": "Claude triage: flagged text is the .hl marker highlight (coral band behind headline words, copied from the site's .hl style); rendered keyframes checked, no text touches a container edge"
+      }
+    ]
+  }
+}

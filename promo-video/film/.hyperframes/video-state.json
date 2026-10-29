@@ -1,0 +1,1743 @@
+{
+  "version": 1,
+  "historyId": "d8316912-65e8-4df9-b5b3-200541189933",
+  "currentRevision": "c74b111a-c00c-4faa-b432-84ac9b327485",
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "1b36171117cb7c18f4100a0db6a3782ff2e096115995733200445cc2e80a4060",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/1b/1b36171117cb7c18f4100a0db6a3782ff2e096115995733200445cc2e80a4060"
+    },
+    "CLAUDE.md": {
+      "hash": "1b36171117cb7c18f4100a0db6a3782ff2e096115995733200445cc2e80a4060",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/1b/1b36171117cb7c18f4100a0db6a3782ff2e096115995733200445cc2e80a4060"
+    },
+    "SPEC.md": {
+      "hash": "694ffac4b2c9be7679854241a83c5cfc44dc3230497116106d77b3415ac6d9ce",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/69/694ffac4b2c9be7679854241a83c5cfc44dc3230497116106d77b3415ac6d9ce"
+    },
+    "STORYLINES.md": {
+      "hash": "5899e99f10b254260b99ece119439e118e1fdaa28ab3845bba5df37f70ee07eb",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/58/5899e99f10b254260b99ece119439e118e1fdaa28ab3845bba5df37f70ee07eb"
+    },
+    "assets/fonts/bricolage-grotesque-latin-800-normal.woff2": {
+      "hash": "3e1b5f0a56ee995b7c1445bc54e6ec98c5dffb585ef5c4baf86731cf68e27c61",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/3e/3e1b5f0a56ee995b7c1445bc54e6ec98c5dffb585ef5c4baf86731cf68e27c61"
+    },
+    "assets/fonts/dm-mono-latin-500-normal.woff2": {
+      "hash": "9964608a849396bd00c4bfd7034afe03486469dcf20b4f6b8cbdfdd310369951",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/99/9964608a849396bd00c4bfd7034afe03486469dcf20b4f6b8cbdfdd310369951"
+    },
+    "assets/fonts/dm-sans-latin-500-normal.woff2": {
+      "hash": "19bf1984956517c35c2bd35b6cdedac12a21d6fcd3596c614ecdfb88b648909d",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/19/19bf1984956517c35c2bd35b6cdedac12a21d6fcd3596c614ecdfb88b648909d"
+    },
+    "assets/fonts/dm-sans-latin-700-normal.woff2": {
+      "hash": "35c5efa0e5daa52ee5c6500f5be354bf751fb65c4e49e1d6806c6eb5883e8fe9",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/35/35c5efa0e5daa52ee5c6500f5be354bf751fb65c4e49e1d6806c6eb5883e8fe9"
+    },
+    "assets/logo.svg": {
+      "hash": "f601c0c783881406c51255b4cf1b461ecea296ecdab79e552549d7b17ca255eb",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/f6/f601c0c783881406c51255b4cf1b461ecea296ecdab79e552549d7b17ca255eb"
+    },
+    "assets/quiz/q1-picked.png": {
+      "hash": "98aeb876d394ae2ac07f6027ff706043735a4ba01aff200c14faae7ee2d3fa9e",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/98/98aeb876d394ae2ac07f6027ff706043735a4ba01aff200c14faae7ee2d3fa9e"
+    },
+    "assets/quiz/q1.png": {
+      "hash": "62bb3feb77d765597737b0491879f596d1659f0d9e2e340acdf2d15e72926412",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/62/62bb3feb77d765597737b0491879f596d1659f0d9e2e340acdf2d15e72926412"
+    },
+    "assets/quiz/q2-picked.png": {
+      "hash": "7531f301a223b98443c6ee34965653315bab4d8cfb626cbbcbe91f600dd5adfb",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/75/7531f301a223b98443c6ee34965653315bab4d8cfb626cbbcbe91f600dd5adfb"
+    },
+    "assets/quiz/q2.png": {
+      "hash": "3a271cd65feeaa7c196703305ff3f8244cfc685a726fb1a413882592354e5d8a",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/3a/3a271cd65feeaa7c196703305ff3f8244cfc685a726fb1a413882592354e5d8a"
+    },
+    "assets/quiz/q3-picked.png": {
+      "hash": "389e676d064c128774bcecdd2d94f31162e384ad902b48a4b792592b3679517f",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/38/389e676d064c128774bcecdd2d94f31162e384ad902b48a4b792592b3679517f"
+    },
+    "assets/quiz/q3.png": {
+      "hash": "ed4c8548052fc90e3deda8be232dafcf4a72208b86488f36fff00cd1bdafb1c5",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/ed/ed4c8548052fc90e3deda8be232dafcf4a72208b86488f36fff00cd1bdafb1c5"
+    },
+    "assets/sfx/CREDITS.md": {
+      "hash": "79590c7738b0427b10f362f76b02cfd2643158a40e1d5fd787f9ac6b33bcf4ce",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/79/79590c7738b0427b10f362f76b02cfd2643158a40e1d5fd787f9ac6b33bcf4ce"
+    },
+    "assets/sfx/click-soft.mp3": {
+      "hash": "075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/07/075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d"
+    },
+    "assets/sfx/click.mp3": {
+      "hash": "075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/07/075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d"
+    },
+    "assets/sfx/impact-bass-1.mp3": {
+      "hash": "634d5eda5eb7b501aca98393a64f3815eccf24157cd1d95df55aaec1b5000bd7",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/63/634d5eda5eb7b501aca98393a64f3815eccf24157cd1d95df55aaec1b5000bd7"
+    },
+    "assets/sfx/key-press.mp3": {
+      "hash": "bcc892df0898bf466162f14233c3e92a8c1ea351f6affd8a3a7e56c9a760bb72",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/bc/bcc892df0898bf466162f14233c3e92a8c1ea351f6affd8a3a7e56c9a760bb72"
+    },
+    "assets/sfx/notification.mp3": {
+      "hash": "b1559967dedb7994a82371f10cec9f7f3992e6b147b4cd88d62112bcdc3f9ba3",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/b1/b1559967dedb7994a82371f10cec9f7f3992e6b147b4cd88d62112bcdc3f9ba3"
+    },
+    "assets/sfx/pop.mp3": {
+      "hash": "19ab7193f626ff57fdeef60b45543bac416fcbcec803cfb417abe4b271c1b352",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/19/19ab7193f626ff57fdeef60b45543bac416fcbcec803cfb417abe4b271c1b352"
+    },
+    "assets/sfx/riser.mp3": {
+      "hash": "d2f29d49f27dee7d3b25af22ffe5bebc39390cc5d5fb3b3e1c433499c77f3d1d",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/d2/d2f29d49f27dee7d3b25af22ffe5bebc39390cc5d5fb3b3e1c433499c77f3d1d"
+    },
+    "assets/sfx/whoosh-cinematic.mp3": {
+      "hash": "0a0f3505856fdfa84ac6b86b3c55ccd0ef1eb4ff0907d7b6934002218a73404e",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/0a/0a0f3505856fdfa84ac6b86b3c55ccd0ef1eb4ff0907d7b6934002218a73404e"
+    },
+    "assets/sfx/whoosh-short.mp3": {
+      "hash": "c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/c2/c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30"
+    },
+    "assets/sfx/whoosh.mp3": {
+      "hash": "c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/c2/c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30"
+    },
+    "compositions/endcard.html": {
+      "hash": "39791d66054517b9ac51389f10e6f365e77ad8067b472eb83291f02c3fdf93f2",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/39/39791d66054517b9ac51389f10e6f365e77ad8067b472eb83291f02c3fdf93f2"
+    },
+    "compositions/hook.html": {
+      "hash": "992f40ccff9066ca5770f55a03865bd4279d0ff25ea921eed335d17e4d916ac2",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/99/992f40ccff9066ca5770f55a03865bd4279d0ff25ea921eed335d17e4d916ac2"
+    },
+    "compositions/match.html": {
+      "hash": "ba3894a20edc7cac8f05c3320c45690bc685114cb0f9383abe547e6b3d465532",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/ba/ba3894a20edc7cac8f05c3320c45690bc685114cb0f9383abe547e6b3d465532"
+    },
+    "compositions/plan.html": {
+      "hash": "d7774b6b28eefb86fdfe6a43ef3da6614aee172d8da796cc8cf51394c0acbabb",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/d7/d7774b6b28eefb86fdfe6a43ef3da6614aee172d8da796cc8cf51394c0acbabb"
+    },
+    "compositions/quiz.html": {
+      "hash": "acd8d5e13ce5b55c4689323e651ac6b5ed837c2f80631934c8568e00b5228724",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/ac/acd8d5e13ce5b55c4689323e651ac6b5ed837c2f80631934c8568e00b5228724"
+    },
+    "compositions/tabs.html": {
+      "hash": "0757e7dd0efde0fea59172a21aec24621c49c0d296a440f63a7117f116c52194",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/07/0757e7dd0efde0fea59172a21aec24621c49c0d296a440f63a7117f116c52194"
+    },
+    "hyperframes.json": {
+      "hash": "35a6d4ea79ebe911f0d81705f7aace5d8ff0316b745b0311d56af50c9c237cb7",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/35/35a6d4ea79ebe911f0d81705f7aace5d8ff0316b745b0311d56af50c9c237cb7"
+    },
+    "index.html": {
+      "hash": "f210f6b0c34c7060dbf9df78a12823565b9604fb3a467e61ac82741541f70ec0",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/f2/f210f6b0c34c7060dbf9df78a12823565b9604fb3a467e61ac82741541f70ec0"
+    },
+    "meta.json": {
+      "hash": "67d193b5faed57b49b447b0a960a3c19a3a249adf908e6d01a8c7aa8a8d7ae9e",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/67/67d193b5faed57b49b447b0a960a3c19a3a249adf908e6d01a8c7aa8a8d7ae9e"
+    },
+    "package.json": {
+      "hash": "c5875555efb79fb7036a07ba467ef314206d2835560d747c85336726c8c0b7b6",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/c5/c5875555efb79fb7036a07ba467ef314206d2835560d747c85336726c8c0b7b6"
+    },
+    "REVIEW.md": {
+      "hash": "4e22c14e47a39850666bafa54a4ec9b61b577ae3daeb7b7857c8a1459153e34a",
+      "content": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/4e/4e22c14e47a39850666bafa54a4ec9b61b577ae3daeb7b7857c8a1459153e34a"
+    }
+  },
+  "revisions": {
+    "7fe29a9e-8c84-4a61-82d1-1881ae5ab50d": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793190207428,
+      "endedAt": 1793190207451,
+      "files": {
+        "compositions/endcard.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/61/61fa01c3c19df5aac45b6cca057e6170041ea43e02c67b4d43fb6f3abf0eaf8a",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/49/49e03a7830b659d39364e4b632bc4fdd1d1f2b335c0f58986b3525ca2bf6d16f"
+        },
+        "compositions/match.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/f0/f0753409ce388e6009dd1b96b382af5193a786d34f4992b07f0d464e2ce353a5",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/0e/0e4b5252f0d54b88625a3b6c62fbe2eea7a2c22b1a8a9ea656b7d3ffe4885ab2"
+        },
+        "compositions/plan.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/8f/8f6d59fa169b5a745f48a211f7376fbcbddeefb8418a710904136c97adcb9f08",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/62/623d26480219ff02b8c7f7384e7009ad1e78f89c5bbea2952b45ce5ebc1c7e77"
+        },
+        "compositions/quiz.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/89/8973fe608272efb7c60508d3f339fe763c9b1dfa2af102aaac36ba0e54d87a3a",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/1a/1a3a4bb128a21cecad7a3c920022169baa99ffdd8e2da2fe87449cc90f983157"
+        },
+        "compositions/tabs.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/d2/d2cb0c0774686b27f0a8be0e81cf874e054920fd7ae345481f8a9b93f3204b5f",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/3e/3e156d7e7cd3591fb43c1d36320876fbdf62e38ac7d7b3e1b958f64eecde6015"
+        },
+        "index.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/13/13f49bb6b16823ec96f367a6de534a32d506397895c6d99272da20e3af1fe1a5",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/7f/7f596b2a6f515a05c1f94718dc264f3ca3c88a9cdfbe5fdebf6175a53ee74f3c"
+        }
+      }
+    },
+    "047155dd-5c9a-4212-861c-5c516e0dc889": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793190251743,
+      "endedAt": 1793190251778,
+      "files": {
+        "compositions/match.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/0e/0e4b5252f0d54b88625a3b6c62fbe2eea7a2c22b1a8a9ea656b7d3ffe4885ab2",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/02/02de847d933e27621f681c7274f221da6facd6732b760638557e8720f13a6f4d"
+        },
+        "index.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/7f/7f596b2a6f515a05c1f94718dc264f3ca3c88a9cdfbe5fdebf6175a53ee74f3c",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/76/7610642ddbaa99308812c55ee9522e0f3e3f2da1352fac1d30a99ace1007db36"
+        }
+      }
+    },
+    "a0abe616-3370-461a-9cb3-dac8053941b1": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793190347533,
+      "endedAt": 1793190347564,
+      "files": {
+        "compositions/match.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/02/02de847d933e27621f681c7274f221da6facd6732b760638557e8720f13a6f4d",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/11/1197ecb28a6db019893e683ecb076890360294d86281723663c8aafe5d50936d"
+        },
+        "compositions/plan.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/62/623d26480219ff02b8c7f7384e7009ad1e78f89c5bbea2952b45ce5ebc1c7e77",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/24/24f5e4fe232d4d1e0cad6fbae48cec1b9ed4d70e20d833dc4a8c367806ccf89f"
+        },
+        "compositions/quiz.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/1a/1a3a4bb128a21cecad7a3c920022169baa99ffdd8e2da2fe87449cc90f983157",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/a5/a53ef0f0e4af6b500578a85d4d17acf72f996e92ade88f00a45b4b468f869e4b"
+        },
+        "compositions/tabs.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/3e/3e156d7e7cd3591fb43c1d36320876fbdf62e38ac7d7b3e1b958f64eecde6015",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/aa/aab6f6e8ef6adb0818715c5ca079fa150275303ebe2e45e3b9fe816cc155ca7d"
+        }
+      }
+    },
+    "0a5929d0-057a-40f0-83e9-c6423dae297c": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793190385049,
+      "endedAt": 1793190385068,
+      "files": {
+        "compositions/match.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/11/1197ecb28a6db019893e683ecb076890360294d86281723663c8aafe5d50936d",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/af/af0618c98d48b9bc094f3b3ac006d493067a9f2ac5259cab8df3e5549741e87a"
+        },
+        "compositions/tabs.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/aa/aab6f6e8ef6adb0818715c5ca079fa150275303ebe2e45e3b9fe816cc155ca7d",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/77/773ac723ec35cbd8b59fcd1cf22fbf2ca33e28500e7d2860de86706a7bc072be"
+        }
+      }
+    },
+    "7bb69e4a-640b-43fb-8f06-2c074a178d34": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793190446965,
+      "endedAt": 1793190446967,
+      "files": {
+        "compositions/quiz.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/a5/a53ef0f0e4af6b500578a85d4d17acf72f996e92ade88f00a45b4b468f869e4b",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/46/465641fc0252039ba4237a64b78921994d9e12bdedfea305775ec9712cf20b50"
+        }
+      }
+    },
+    "0044cf56-48e3-4234-a993-912248de0432": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793190484033,
+      "endedAt": 1793190484060,
+      "files": {
+        "compositions/endcard.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/49/49e03a7830b659d39364e4b632bc4fdd1d1f2b335c0f58986b3525ca2bf6d16f",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/39/39791d66054517b9ac51389f10e6f365e77ad8067b472eb83291f02c3fdf93f2"
+        },
+        "compositions/hook.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/a8/a83ffa243b11df44449616fc36eb942f65c0ab1629641a7a242f07f1dd489d17",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/99/992f40ccff9066ca5770f55a03865bd4279d0ff25ea921eed335d17e4d916ac2"
+        },
+        "compositions/match.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/af/af0618c98d48b9bc094f3b3ac006d493067a9f2ac5259cab8df3e5549741e87a",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/ba/ba3894a20edc7cac8f05c3320c45690bc685114cb0f9383abe547e6b3d465532"
+        },
+        "compositions/plan.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/24/24f5e4fe232d4d1e0cad6fbae48cec1b9ed4d70e20d833dc4a8c367806ccf89f",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/d7/d7774b6b28eefb86fdfe6a43ef3da6614aee172d8da796cc8cf51394c0acbabb"
+        },
+        "compositions/quiz.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/46/465641fc0252039ba4237a64b78921994d9e12bdedfea305775ec9712cf20b50",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/ac/acd8d5e13ce5b55c4689323e651ac6b5ed837c2f80631934c8568e00b5228724"
+        },
+        "compositions/tabs.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/77/773ac723ec35cbd8b59fcd1cf22fbf2ca33e28500e7d2860de86706a7bc072be",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/07/0757e7dd0efde0fea59172a21aec24621c49c0d296a440f63a7117f116c52194"
+        },
+        "index.html": {
+          "before": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/76/7610642ddbaa99308812c55ee9522e0f3e3f2da1352fac1d30a99ace1007db36",
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/f2/f210f6b0c34c7060dbf9df78a12823565b9604fb3a467e61ac82741541f70ec0"
+        }
+      }
+    },
+    "c74b111a-c00c-4faa-b432-84ac9b327485": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793190486743,
+      "endedAt": 1793190488744,
+      "files": {
+        "REVIEW.md": {
+          "before": null,
+          "after": "/Users/liamdupe/.cache/hyperframes/history/d8316912-65e8-4df9-b5b3-200541189933/blobs/4e/4e22c14e47a39850666bafa54a4ec9b61b577ae3daeb7b7857c8a1459153e34a"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": {
+      "revision": "7bb69e4a-640b-43fb-8f06-2c074a178d34",
+      "id": "74454174-995f-45d8-9a6a-37f058437c4f"
+    },
+    "revisions": {
+      "7fe29a9e-8c84-4a61-82d1-1881ae5ab50d": [
+        {
+          "id": "fb0ca26e-2309-4eba-9bc3-303c9bf8b476",
+          "scope": "project",
+          "report": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/checks/fb0ca26e-2309-4eba-9bc3-303c9bf8b476.json",
+          "metadata": {
+            "ok": false,
+            "browserSkipped": true,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 10000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1793190209054,
+          "contentHash": "1b3d7751e203578fd3639f46baf678182567cfd71420335cdfd78f19497e29e2",
+          "revision": "7fe29a9e-8c84-4a61-82d1-1881ae5ab50d",
+          "inputFingerprint": "0a96e0938ccf1744a7856c5c48a603f128e679ca5e3581064d2703ad4e4fd2e6",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ],
+      "047155dd-5c9a-4212-861c-5c516e0dc889": [
+        {
+          "id": "ecf39f4f-35db-41d8-b64e-9f413837e7b6",
+          "scope": "project",
+          "report": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/checks/ecf39f4f-35db-41d8-b64e-9f413837e7b6.json",
+          "metadata": {
+            "ok": false,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 10000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1793190270581,
+          "contentHash": "a793bf3f5786e38487a958c4eeab280d39bbb2882f682363656c182e0f1f6719",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ],
+      "0a5929d0-057a-40f0-83e9-c6423dae297c": [
+        {
+          "id": "36ae4536-dea9-4bd6-9bef-07d92cd7256d",
+          "scope": "project",
+          "report": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/checks/36ae4536-dea9-4bd6-9bef-07d92cd7256d.json",
+          "metadata": {
+            "ok": false,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 10000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1793190434312,
+          "contentHash": "fdaece8a3edd18f7c208ade81b66ea3d505ca6f7ff7c9f9609266903fc0a125b",
+          "revision": "0a5929d0-057a-40f0-83e9-c6423dae297c",
+          "inputFingerprint": "8307003b8e21e441cdd3b09bd3b76373371e181d418b203d284072617362cd68",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ],
+      "7bb69e4a-640b-43fb-8f06-2c074a178d34": [
+        {
+          "id": "74454174-995f-45d8-9a6a-37f058437c4f",
+          "scope": "project",
+          "report": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/checks/74454174-995f-45d8-9a6a-37f058437c4f.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 10000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1793190469409,
+          "contentHash": "2a32585566c51a8d16eb6953a634af56b36a8423b3d98e5b58bbebbe7a8af791",
+          "revision": "7bb69e4a-640b-43fb-8f06-2c074a178d34",
+          "inputFingerprint": "9bee22e5dd149f76890bee57f1f9ade8fc4d9861dff5615ea992afe5487bf4e7",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "id": "6096b2f8-8a2f-4f61-9dc7-6e7dd962020b",
+        "scope": "project",
+        "report": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/checks/6096b2f8-8a2f-4f61-9dc7-6e7dd962020b.json",
+        "metadata": {
+          "ok": false,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 10000,
+            "contrast": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto"
+          }
+        },
+        "createdAt": 1793190154666,
+        "contentHash": "b88d979f146647c20334b5115e4eb4b931cb982b6383a94cdf94d971648ddc67",
+        "revision": null,
+        "inputFingerprint": "9363c445b89aa5bb82c1b091f96f43256d7d8af611af555d2868b6da7edf436f",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": {
+      "revision": "0a5929d0-057a-40f0-83e9-c6423dae297c",
+      "id": "b2170036-ceae-4f27-8bfe-4521bb5ebb94-4"
+    },
+    "revisions": {
+      "047155dd-5c9a-4212-861c-5c516e0dc889": [
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-0",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/beat-01-at-0.3s.png",
+          "time": 0.3,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "hook"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297130,
+          "contentHash": "4ceb9cebaf9da08a62cb81b21aac5523a9e71c276276c9017dfeb43ebf09ed48",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-1",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/beat-02-at-1.6s.png",
+          "time": 1.6,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "hook mid"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297130,
+          "contentHash": "6ae027ed2be9fd62d250aa57b26ad155448bc29028b5b675d782ed79b91fa8b7",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-2",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/beat-03-at-3.5s.png",
+          "time": 3.5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "tabs"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "e94f4c49ed75541de744a6bfff903c9807c9b6b9a2e7f501259ca5e5f67da1de",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-3",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/beat-04-at-5.4s.png",
+          "time": 5.4,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "tabs mid"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "35a532f43cfe7fdc6167cd1f105450ed599da646ac966afc0b5a228b521b1c2d",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-4",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/beat-05-at-7.9s.png",
+          "time": 7.9,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "quiz"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "b5ff2d8426d6da2ae1456d6b278205d0efac81e505589e4156cbc2dba478f6b2",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-5",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/beat-06-at-10.6s.png",
+          "time": 10.6,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "quiz mid"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "3ae4fc920f251cc16e33cd20ba3e822e7e16e3b22b5c59199ce530608dafb5c9",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-6",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/beat-07-at-13.9s.png",
+          "time": 13.9,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "match"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "61ed355b460db49b156d98e49fcb5c34ed9dc3d7357e44aae6cc12961daa28cb",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-7",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/beat-08-at-16.7s.png",
+          "time": 16.7,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "match mid"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "b53fcb71a7aa0d37978a61411f26444398511088c3dfd75f163d31bdf9fc2360",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-8",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/beat-09-at-20.1s.png",
+          "time": 20.1,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "plan"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "6c3cb381c3e98b4f9499dcb4db7011166194ffc61b2e43df6dc1752f699312f8",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-9",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/beat-10-at-22.4s.png",
+          "time": 22.4,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "plan mid"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "6de68a743897fa12b51a29c60521678cc3a25127156a6bf0cdc6ee566d37d7f3",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-10",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/beat-11-at-25.3s.png",
+          "time": 25.3,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "endcard"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "3db2b6ad98d731ea6f73b9ad0983077602a150cb2cecfbae4f1c9e43833bab84",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-11",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/beat-12-at-27.5s.png",
+          "time": 27.5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "endcard mid"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "f97d96b6d993f024950cede32bbf71da93a266c503c9d5b99d8b7a120f6fcaea",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-12",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-01-1-at-3s.png",
+          "time": 3,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "cut -0.2"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "81be45fc2af2e519b9902c60c050740680ae066215547da087d865880d75ecea",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-13",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-01-2-at-3.1s.png",
+          "time": 3.1,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "-0.1"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "5f6f50d868e137c21d7ec65c6b7f33c77196142100699c6922f9f23e4c53c908",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-14",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-01-3-at-3.2s.png",
+          "time": 3.2,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "cut hook -> tabs"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "48cf5e846aa463ee4019f9e6ba39634a3a5a0a814388079ed17fd53676f2f49c",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-15",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-01-4-at-3.3s.png",
+          "time": 3.3,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "+0.1"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "358ca343ce6476b995ae6f40c518ba0d9fb0b1b8c4819f25bbcfd03770dadc14",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-16",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-01-5-at-3.4s.png",
+          "time": 3.4,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "+0.2"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "634c5f3f4b620d519f7c5a76d63d7d492592fc207e7b9b92e79e9909e3675a04",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-17",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-02-1-at-7.4s.png",
+          "time": 7.4,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "cut -0.2"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "9ed1daca952861197b6b9fbe137da5d0f631c27bb0a9324f692bd1099f8f721a",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-18",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-02-2-at-7.5s.png",
+          "time": 7.5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "-0.1"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "4cd22b5c8f1aef4f863648b3065bb95d7fe514d0f0018301cb3ac1f826301460",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-19",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-02-3-at-7.6s.png",
+          "time": 7.6,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "cut tabs -> quiz"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "be6b4853a8112004e696c34776180419c15b875aad7054d6a5a96f283054ae8e",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-20",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-02-4-at-7.7s.png",
+          "time": 7.7,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "+0.1"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "395bc03783a96253af74bb158ad1eb16916c9e94b9e258e9752eccfdcaf565ed",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-21",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-02-5-at-7.8s.png",
+          "time": 7.8,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "+0.2"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297131,
+          "contentHash": "f47df83c2577ace6e58f8bf81bada138908ee0eeca3536ef9ec904b0bff5ef3b",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-22",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-03-1-at-13.4s.png",
+          "time": 13.4,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "cut -0.2"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297132,
+          "contentHash": "9c23aad6eab107dcd1a7bfff599af5cc78349cf9525a20872b0466d933fbaf85",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-23",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-03-2-at-13.5s.png",
+          "time": 13.5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "-0.1"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297132,
+          "contentHash": "9c23aad6eab107dcd1a7bfff599af5cc78349cf9525a20872b0466d933fbaf85",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-24",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-03-3-at-13.6s.png",
+          "time": 13.6,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "cut quiz -> match"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297132,
+          "contentHash": "9a6efa6c99142a2bba17c2dc817c723c7287112379a39b90e9155f53e24838a4",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-25",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-03-4-at-13.7s.png",
+          "time": 13.7,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "+0.1"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297132,
+          "contentHash": "56e0d9a57ef51b9f3cc3f8fe3ad9a71a5fdd7a80f0ded30a704cb30e2828b0e0",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-26",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-03-5-at-13.8s.png",
+          "time": 13.8,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "+0.2"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297132,
+          "contentHash": "8d977ddfd069e83ef5a19d2780ecff405cac8670373346146cd51cbac73d4bd4",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-27",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-04-1-at-19.6s.png",
+          "time": 19.6,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "cut -0.2"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297132,
+          "contentHash": "c5c508e4d5fe8ef4a7ffd99d2d21aeba616d6e7e6ed89de7e2d67080a5f166d6",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-28",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-04-2-at-19.7s.png",
+          "time": 19.7,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "-0.1"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297132,
+          "contentHash": "c5c508e4d5fe8ef4a7ffd99d2d21aeba616d6e7e6ed89de7e2d67080a5f166d6",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-29",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-04-3-at-19.8s.png",
+          "time": 19.8,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "cut match -> plan"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297132,
+          "contentHash": "2618c2d8e8305deae4c29275a4786956475f9d193aba64be807ef0ad42c4d4e2",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-30",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-04-4-at-19.9s.png",
+          "time": 19.9,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "+0.1"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297132,
+          "contentHash": "2618c2d8e8305deae4c29275a4786956475f9d193aba64be807ef0ad42c4d4e2",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-31",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-04-5-at-20s.png",
+          "time": 20,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "+0.2"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297133,
+          "contentHash": "6eac0746ce28a40d8f347b5f660d3572b5817def93a00301f1c943b67178cdef",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-32",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-05-1-at-24.8s.png",
+          "time": 24.8,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "cut -0.2"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297133,
+          "contentHash": "b7494a3bc195bba6905568be1eea8ee2f88ad4a6a07c61b132f9f43712944527",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-33",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-05-2-at-24.9s.png",
+          "time": 24.9,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "-0.1"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297133,
+          "contentHash": "b7494a3bc195bba6905568be1eea8ee2f88ad4a6a07c61b132f9f43712944527",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-34",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-05-3-at-25s.png",
+          "time": 25,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "cut plan -> endcard"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297133,
+          "contentHash": "860933558a8b9e7816f82f6ef66cdb3b944cb8766571053e29200fdc65328165",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-35",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-05-4-at-25.1s.png",
+          "time": 25.1,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "+0.1"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297133,
+          "contentHash": "ad39f112d1b5aa1d44dc56a7cbddb47ef07011f8208c23e543aafa14a8b04667",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "aec91eea-5973-4f3f-845a-98e9ed38463c-36",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/00a16517-93e8-4a39-b305-311f5e74d4c4/seam-05-5-at-25.2s.png",
+          "time": 25.2,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "+0.2"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190297133,
+          "contentHash": "b78a19a23c80ccbcb8f501ae641116b83380930a2506fce4fa9c864c25f5728a",
+          "revision": "047155dd-5c9a-4212-861c-5c516e0dc889",
+          "inputFingerprint": "c3f46133fe66152f77e73bb55e1216eb5ce300a37fd4fe8fe83840ae4d1b1747",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ],
+      "a0abe616-3370-461a-9cb3-dac8053941b1": [
+        {
+          "scope": "full",
+          "id": "49bec5b5-bf36-45f0-809a-27e070381b1c-0",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/cf5811f7-874b-439c-886f-c29066c68fd6/frame-00-at-2.5s.png",
+          "time": 2.5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190358980,
+          "contentHash": "0cd0578cdc2d489c096e5ea07323862fa5f0e1d1b2fa17f42533f0c46444ea2d",
+          "revision": "a0abe616-3370-461a-9cb3-dac8053941b1",
+          "inputFingerprint": "0be3a93a419d39664686eecf65d960bea0c2e9493dee7581678aff43d6f1503d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "49bec5b5-bf36-45f0-809a-27e070381b1c-1",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/cf5811f7-874b-439c-886f-c29066c68fd6/frame-01-at-6.5s.png",
+          "time": 6.5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190358981,
+          "contentHash": "e58342bdf28dff6d42dc8dfb89aee7c908ac3200d513907d7dcb586a7d7f11a5",
+          "revision": "a0abe616-3370-461a-9cb3-dac8053941b1",
+          "inputFingerprint": "0be3a93a419d39664686eecf65d960bea0c2e9493dee7581678aff43d6f1503d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "49bec5b5-bf36-45f0-809a-27e070381b1c-2",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/cf5811f7-874b-439c-886f-c29066c68fd6/frame-02-at-7.3s.png",
+          "time": 7.3,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190358981,
+          "contentHash": "387c5c97e48faa042eb0850cba2c50c16ca756a05b507420ea46ec1e7064dd99",
+          "revision": "a0abe616-3370-461a-9cb3-dac8053941b1",
+          "inputFingerprint": "0be3a93a419d39664686eecf65d960bea0c2e9493dee7581678aff43d6f1503d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "49bec5b5-bf36-45f0-809a-27e070381b1c-3",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/cf5811f7-874b-439c-886f-c29066c68fd6/frame-03-at-7.75s.png",
+          "time": 7.75,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190358981,
+          "contentHash": "9b45af26139c4c86b4b9dcb39a0452c759f62fbc9c1e60b8a359d77f562b534e",
+          "revision": "a0abe616-3370-461a-9cb3-dac8053941b1",
+          "inputFingerprint": "0be3a93a419d39664686eecf65d960bea0c2e9493dee7581678aff43d6f1503d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "49bec5b5-bf36-45f0-809a-27e070381b1c-4",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/cf5811f7-874b-439c-886f-c29066c68fd6/frame-04-at-12.4s.png",
+          "time": 12.4,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190358981,
+          "contentHash": "5686defbce5f44f3d67db36117eb9b32c224600c0fc9c2818258158aa08f67e1",
+          "revision": "a0abe616-3370-461a-9cb3-dac8053941b1",
+          "inputFingerprint": "0be3a93a419d39664686eecf65d960bea0c2e9493dee7581678aff43d6f1503d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "49bec5b5-bf36-45f0-809a-27e070381b1c-5",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/cf5811f7-874b-439c-886f-c29066c68fd6/frame-05-at-13.7s.png",
+          "time": 13.7,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190358981,
+          "contentHash": "4c01785b26f1580ec05d2b33d1b07fd7dd57ae0178f8eeeafc8e4248e9a82aa7",
+          "revision": "a0abe616-3370-461a-9cb3-dac8053941b1",
+          "inputFingerprint": "0be3a93a419d39664686eecf65d960bea0c2e9493dee7581678aff43d6f1503d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "49bec5b5-bf36-45f0-809a-27e070381b1c-6",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/cf5811f7-874b-439c-886f-c29066c68fd6/frame-06-at-15.6s.png",
+          "time": 15.6,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190358981,
+          "contentHash": "bb3f5f5ce8d8fda24072f7b410085c844be4c94359f4539a8f7bf0ad5ed907b2",
+          "revision": "a0abe616-3370-461a-9cb3-dac8053941b1",
+          "inputFingerprint": "0be3a93a419d39664686eecf65d960bea0c2e9493dee7581678aff43d6f1503d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "49bec5b5-bf36-45f0-809a-27e070381b1c-7",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/cf5811f7-874b-439c-886f-c29066c68fd6/frame-07-at-17.4s.png",
+          "time": 17.4,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190358982,
+          "contentHash": "2ad43f8b62ddf39f4c56265b9062fa387c91f2c111b239ea6811407e76bbbccc",
+          "revision": "a0abe616-3370-461a-9cb3-dac8053941b1",
+          "inputFingerprint": "0be3a93a419d39664686eecf65d960bea0c2e9493dee7581678aff43d6f1503d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "49bec5b5-bf36-45f0-809a-27e070381b1c-8",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/cf5811f7-874b-439c-886f-c29066c68fd6/frame-08-at-18.6s.png",
+          "time": 18.6,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190358982,
+          "contentHash": "d70725a10d06a08379e13447e04f63b569a1c48cf11d5ddf3b70583ab3acedb0",
+          "revision": "a0abe616-3370-461a-9cb3-dac8053941b1",
+          "inputFingerprint": "0be3a93a419d39664686eecf65d960bea0c2e9493dee7581678aff43d6f1503d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "49bec5b5-bf36-45f0-809a-27e070381b1c-9",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/cf5811f7-874b-439c-886f-c29066c68fd6/frame-09-at-19.4s.png",
+          "time": 19.4,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190358982,
+          "contentHash": "b668515aae07ad0e576180f050e11e3ec3b2bec78829ec459481fba48cc5ac77",
+          "revision": "a0abe616-3370-461a-9cb3-dac8053941b1",
+          "inputFingerprint": "0be3a93a419d39664686eecf65d960bea0c2e9493dee7581678aff43d6f1503d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "49bec5b5-bf36-45f0-809a-27e070381b1c-10",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/cf5811f7-874b-439c-886f-c29066c68fd6/frame-10-at-24s.png",
+          "time": 24,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190358982,
+          "contentHash": "387d3bfa0220cd2e726543a3fec4274aa9558663f1853c356228cf0ce676e26c",
+          "revision": "a0abe616-3370-461a-9cb3-dac8053941b1",
+          "inputFingerprint": "0be3a93a419d39664686eecf65d960bea0c2e9493dee7581678aff43d6f1503d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "49bec5b5-bf36-45f0-809a-27e070381b1c-11",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/cf5811f7-874b-439c-886f-c29066c68fd6/frame-11-at-29.5s.png",
+          "time": 29.5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190358982,
+          "contentHash": "b41565caf2e359366a4bfb1a22cfedf6a0d7d7e02e5dbe34b6425d7e6da31016",
+          "revision": "a0abe616-3370-461a-9cb3-dac8053941b1",
+          "inputFingerprint": "0be3a93a419d39664686eecf65d960bea0c2e9493dee7581678aff43d6f1503d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "49bec5b5-bf36-45f0-809a-27e070381b1c-12",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/cf5811f7-874b-439c-886f-c29066c68fd6/frame-12-at-29.75s.png",
+          "time": 29.75,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190358983,
+          "contentHash": "b41565caf2e359366a4bfb1a22cfedf6a0d7d7e02e5dbe34b6425d7e6da31016",
+          "revision": "a0abe616-3370-461a-9cb3-dac8053941b1",
+          "inputFingerprint": "0be3a93a419d39664686eecf65d960bea0c2e9493dee7581678aff43d6f1503d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ],
+      "0a5929d0-057a-40f0-83e9-c6423dae297c": [
+        {
+          "scope": "full",
+          "id": "b2170036-ceae-4f27-8bfe-4521bb5ebb94-0",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/4d9fb796-d84f-4b30-b906-6354d87cc165/frame-00-at-6.6s.png",
+          "time": 6.6,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190393481,
+          "contentHash": "ca320c1ffaa651abd1c5d99cb25dd4f12b7890b960da00e3c75fe1562bc1a83d",
+          "revision": "0a5929d0-057a-40f0-83e9-c6423dae297c",
+          "inputFingerprint": "8307003b8e21e441cdd3b09bd3b76373371e181d418b203d284072617362cd68",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "b2170036-ceae-4f27-8bfe-4521bb5ebb94-1",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/4d9fb796-d84f-4b30-b906-6354d87cc165/frame-01-at-17.5s.png",
+          "time": 17.5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190393481,
+          "contentHash": "7b4ad73e9806f9946a704b8bb29927a520d2852d5ec1ac33e257b838f00d2745",
+          "revision": "0a5929d0-057a-40f0-83e9-c6423dae297c",
+          "inputFingerprint": "8307003b8e21e441cdd3b09bd3b76373371e181d418b203d284072617362cd68",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "b2170036-ceae-4f27-8bfe-4521bb5ebb94-2",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/4d9fb796-d84f-4b30-b906-6354d87cc165/frame-02-at-18.2s.png",
+          "time": 18.2,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190393481,
+          "contentHash": "98ac9289d13afcbbcc7564f2b15ae69f242ae16f68fe7c95b698a0d2ba4b50af",
+          "revision": "0a5929d0-057a-40f0-83e9-c6423dae297c",
+          "inputFingerprint": "8307003b8e21e441cdd3b09bd3b76373371e181d418b203d284072617362cd68",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "b2170036-ceae-4f27-8bfe-4521bb5ebb94-3",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/4d9fb796-d84f-4b30-b906-6354d87cc165/frame-03-at-19.5s.png",
+          "time": 19.5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190393481,
+          "contentHash": "d16a166095b7d1b7a4ec7b81f3cda6dd5d2004c41a013e98c2505f20f9e94c2d",
+          "revision": "0a5929d0-057a-40f0-83e9-c6423dae297c",
+          "inputFingerprint": "8307003b8e21e441cdd3b09bd3b76373371e181d418b203d284072617362cd68",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "b2170036-ceae-4f27-8bfe-4521bb5ebb94-4",
+          "image": "/Users/liamdupe/Documents/GitHub/weekend-escape/promo-video/film/.hyperframes/artifacts/snapshots/4d9fb796-d84f-4b30-b906-6354d87cc165/frame-04-at-29.75s.png",
+          "time": 29.75,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793190393481,
+          "contentHash": "b41565caf2e359366a4bfb1a22cfedf6a0d7d7e02e5dbe34b6425d7e6da31016",
+          "revision": "0a5929d0-057a-40f0-83e9-c6423dae297c",
+          "inputFingerprint": "8307003b8e21e441cdd3b09bd3b76373371e181d418b203d284072617362cd68",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": []
+  }
+}

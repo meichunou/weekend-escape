@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "wide-tracking",
+        "value": "*",
+        "files": [
+          "compositions/plan.html"
+        ],
+        "createdAt": "2026-10-28T12:28:32.612Z",
+        "reason": "Claude: tracking is only on short uppercase day labels (FRIDAY/SATURDAY/SUNDAY), mirroring the site"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-28T12:28:32.750Z",
+        "reason": "Claude: #FFF3E4 is the Weekend Escape site's own brand token (index.html of the site), not a default"
+      },
+      {
+        "rule": "buried-raster",
+        "value": "*",
+        "files": [
+          "compositions/quiz.html"
+        ],
+        "createdAt": "2026-10-28T12:28:32.834Z",
+        "reason": "Claude: quiz captures start at opacity 0 and are revealed by the GSAP timeline at each tap; they are visible in rendered frames"
+      }
+    ]
+  }
+}

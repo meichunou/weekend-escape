@@ -1,0 +1,92 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #pl-ground { position: absolute; inset: 0; background: var(--cream); }
+    #pl-sun { position: absolute; left: 140px; top: 1260px; width: 800px; height: 800px; }
+    /* Same box as the match ticket, so the flip starts where the match ended. */
+    .pl-face { position: absolute; left: 70px; top: 470px; width: 940px; height: 760px; background: var(--paper); border: var(--line); border-radius: 40px; box-shadow: var(--shadow); overflow: hidden; }
+    .pl-head { padding: 36px 48px 30px; background: var(--peach); border-bottom: 6px dashed var(--ink); }
+    .pl-route { font: 500 30px var(--mono); letter-spacing: 0.06em; }
+    #pl-front-city { font: 800 132px/1 var(--display); letter-spacing: -0.035em; margin-top: 12px; white-space: nowrap; }
+    #pl-front-total { position: absolute; right: 48px; bottom: 36px; font: 800 150px/1 var(--display); letter-spacing: -0.04em; color: var(--coral-text); }
+    #pl-back-title { font: 800 96px/1 var(--display); letter-spacing: -0.035em; margin-top: 12px; white-space: nowrap; }
+    #pl-days { padding: 26px 48px 0; }
+    .pl-day { margin-bottom: 18px; }
+    .pl-day-k { font: 700 30px var(--body); letter-spacing: 0.14em; color: var(--coral-text); }
+    .pl-day-v { font: 500 40px/1.18 var(--body); margin-top: 4px; }
+    #pl-back-foot { position: absolute; left: 48px; right: 48px; bottom: 30px; display: flex; justify-content: space-between; align-items: baseline; border-top: var(--line); padding-top: 14px; }
+    #pl-back-foot span { font: 500 28px var(--mono); }
+    #pl-back-foot b { font: 800 64px var(--display); }
+    /* Lock screen. */
+    #pl-lock, #pl-sun, #pl-notif { opacity: 0; }
+    #pl-note { position: absolute; left: 70px; top: 1262px; font: 500 28px var(--mono); color: var(--ink-soft); white-space: nowrap; }
+    #pl-lock { position: absolute; left: 0; right: 0; top: 230px; text-align: center; color: var(--cream); }
+    #pl-lock-day { font: 700 52px var(--body); letter-spacing: 0.14em; }
+    #pl-clock { font: 800 300px/0.95 var(--display); letter-spacing: -0.04em; display: flex; justify-content: center; }
+    #pl-min { position: relative; display: inline-block; width: 0.56em; height: 0.95em; overflow: hidden; }
+    .pl-digit { position: absolute; left: 0; top: 0; }
+    #pl-notif { position: absolute; left: 70px; top: 760px; width: 940px; background: var(--paper); border: var(--line); border-radius: 44px; box-shadow: 14px 14px 0 var(--sun); padding: 30px 36px 36px; display: grid; grid-template-columns: 110px 1fr; gap: 6px 26px; }
+    #pl-notif img { width: 110px; height: 110px; grid-row: span 3; }
+    #pl-notif-top { display: flex; justify-content: space-between; font: 500 28px var(--mono); color: var(--ink-soft); }
+    #pl-notif b { font: 800 56px/1.05 var(--display); letter-spacing: -0.02em; }
+    #pl-notif p { font: 500 38px/1.3 var(--body); }
+  </style>
+  <div data-hf-id="hf-kzxw" id="root" data-composition-id="plan" data-width="1080" data-height="1920">
+    <div data-hf-id="hf-n2z3" id="pl-ground"></div>
+    <svg data-hf-id="hf-ji8h" id="pl-sun" viewBox="-500 -500 1000 1000" aria-hidden="true">
+      <defs data-hf-id="hf-mh0t"><clipPath data-hf-id="hf-mjdf" id="pl-sun-clip"><circle data-hf-id="hf-bqb4" r="478" /></clipPath></defs>
+      <circle data-hf-id="hf-en3d" r="478" fill="#FFB92E" />
+      <g data-hf-id="hf-zjp1" clip-path="url(#pl-sun-clip)" fill="#231B2E">
+        <rect data-hf-id="hf-cns0" x="-500" y="40" width="1000" height="12" /><rect data-hf-id="hf-2aga" x="-500" y="98" width="1000" height="19" />
+        <rect data-hf-id="hf-y3k2" x="-500" y="160" width="1000" height="26" /><rect data-hf-id="hf-zbtl" x="-500" y="226" width="1000" height="33" />
+        <rect data-hf-id="hf-uapu" x="-500" y="296" width="1000" height="40" /><rect data-hf-id="hf-p0cs" x="-500" y="370" width="1000" height="47" />
+        <rect data-hf-id="hf-jiuz" x="-500" y="440" width="1000" height="60" />
+      </g>
+    </svg>
+    <div data-hf-id="hf-1nt3" id="pl-lock">
+      <div data-hf-id="hf-08at" id="pl-lock-day">FRIDAY</div>
+      <div data-hf-id="hf-6ji4" id="pl-clock"><span data-hf-id="hf-thm7">18:3</span><span data-hf-id="hf-yqih" id="pl-min"><span data-hf-id="hf-iyxc" class="pl-digit" id="pl-d0">0</span><span data-hf-id="hf-wtew" class="pl-digit" id="pl-d1">1</span></span></div>
+    </div>
+    <div data-hf-id="hf-wkki" class="pl-face" id="pl-front">
+      <div data-hf-id="hf-vrh7" class="pl-head"><div data-hf-id="hf-2hi3" class="pl-route">PARIS → BRUSSELS · 🚆 TRAIN 1h20</div><div data-hf-id="hf-vrc9" id="pl-front-city">Brussels 🍫</div></div>
+      <div data-hf-id="hf-tlgm" id="pl-front-total">~€136</div>
+    </div>
+    <div data-hf-id="hf-a3ns" class="pl-face" id="pl-back">
+      <div data-hf-id="hf-738b" class="pl-head"><div data-hf-id="hf-e1rs" class="pl-route">PARIS → BRUSSELS · FRI → SUN</div><div data-hf-id="hf-cyab" id="pl-back-title">Your weekend plan</div></div>
+      <div data-hf-id="hf-kejv" id="pl-days">
+        <div data-hf-id="hf-q40t" class="pl-day" id="pl-fri"><div data-hf-id="hf-1eiq" class="pl-day-k">FRIDAY</div><div data-hf-id="hf-t44o" class="pl-day-v">Fries at Maison Antoine, beers at Delirium.</div></div>
+        <div data-hf-id="hf-359c" class="pl-day" id="pl-sat"><div data-hf-id="hf-lg7a" class="pl-day-k">SATURDAY</div><div data-hf-id="hf-0lsk" class="pl-day-v">Comic strip murals walk + Magritte Museum.</div></div>
+        <div data-hf-id="hf-n133" class="pl-day" id="pl-sun-day"><div data-hf-id="hf-4hqh" class="pl-day-k">SUNDAY</div><div data-hf-id="hf-wopy" class="pl-day-v">Flea market at Place du Jeu de Balle.</div></div>
+      </div>
+      <div data-hf-id="hf-5c1s" id="pl-back-foot"><span data-hf-id="hf-rfl0">TRAIN + 2 NIGHTS + FOOD</span><b data-hf-id="hf-5v33">~€136</b></div>
+    </div>
+    <div data-hf-id="hf-f2u2" id="pl-note">Estimates from our destination data, not live prices.</div>
+    <div data-hf-id="hf-rg9o" id="pl-notif">
+      <img data-hf-id="hf-t3bd" src="assets/logo.svg" alt="" />
+      <div data-hf-id="hf-abwm" id="pl-notif-top"><span data-hf-id="hf-ki6t">WEEKEND ESCAPE</span><span data-hf-id="hf-9yvn">now</span></div>
+      <b data-hf-id="hf-fgzw">Your Brussels weekend plan 🇧🇪</b>
+      <p data-hf-id="hf-bk6z">🍫 Brussels · about €136 all in</p>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.set("#pl-d1", { yPercent: 100 }, 0);
+    // The ticket flips over to the plan.
+    tl.fromTo("#pl-front", { rotationY: 0, transformPerspective: 2400 }, { rotationY: -90, duration: 0.22, ease: "power2.in" }, 0.15);
+    tl.fromTo("#pl-back", { rotationY: 90, transformPerspective: 2400, opacity: 0 }, { rotationY: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: true }, 0.37);
+    tl.set("#pl-front", { opacity: 0 }, 0.37);
+    tl.fromTo(["#pl-fri", "#pl-sat", "#pl-sun-day"], { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power2.out", stagger: 0.3 }, 0.65);
+    tl.fromTo("#pl-back-foot", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "none" }, 1.5);
+    // The plan folds away into a notification; the ground floods to the lock screen.
+    tl.to("#pl-note", { opacity: 0, duration: 0.15, ease: "none" }, 2.95);
+    tl.to("#pl-back", { scale: 0.22, y: 330, opacity: 0, duration: 0.42, ease: "power3.in" }, 2.95);
+    tl.to("#pl-ground", { backgroundColor: "#231B2E", duration: 0.4, ease: "power2.inOut" }, 3.0);
+    tl.fromTo("#pl-lock", { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "none" }, 3.15);
+    tl.fromTo("#pl-sun", { opacity: 1, y: 500 }, { y: 0, duration: 1.2, ease: "expo.out" }, 3.15);
+    // 18:30 becomes 18:31: one minute later.
+    tl.to("#pl-d0", { yPercent: -100, duration: 0.25, ease: "power3.inOut" }, 3.35);
+    tl.to("#pl-d1", { yPercent: 0, duration: 0.25, ease: "power3.inOut" }, 3.35);
+    tl.fromTo("#pl-notif", { opacity: 0, y: -260, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "back.out(1.4)" }, 3.5);
+    window.__timelines["plan"] = tl;
+  </script>
+</template>
